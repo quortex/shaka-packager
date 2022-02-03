@@ -2,7 +2,7 @@ steps:
 
 # Build images
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'eu.gcr.io/quortex-registry/dvbsub2ttml:rel-$TAG_NAME','-f','./Dockerfile', './service/dvbsub2ttml/']
+  args: [ 'build', '-t', 'eu.gcr.io/quortex-registry/dvbsub2ttml:rel-$TAG_NAME','-f','./Dockerfile', '.']
 
 
 timeout: 3600s
