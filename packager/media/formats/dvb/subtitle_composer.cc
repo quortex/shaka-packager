@@ -194,8 +194,8 @@ DvbImageBuilder* SubtitleComposer::GetObjectImage(uint16_t object_id) {
              .emplace(std::piecewise_construct, std::make_tuple(object_id),
                       std::make_tuple(
                           info->second.region->color_space, color,
-                          info->second.region->width - info->second.region->x,
-                          info->second.region->height - info->second.region->y))
+                          display_width_ - info->second.region->x,
+                          display_height_ - info->second.region->y))
              .first;
   }
   return &it->second;

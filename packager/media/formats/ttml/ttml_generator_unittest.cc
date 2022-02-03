@@ -190,10 +190,10 @@ TEST_F(TtmlMuxerTest, HandlesPosition) {
       "  <head/>\n"
       "  <body>\n"
       "    <div>\n"
-      "      <region xml:id=\"_shaka_region_0\" tts:origin=\"30% 4em\" "
+      "      <region xml:id=\"_quortex_region_0\" tts:origin=\"30% 4em\" "
       "tts:extent=\"100px 1em\"/>\n"
       "      <p xml:space=\"preserve\" begin=\"00:00:05.00\" "
-      "end=\"00:00:06.00\" region=\"_shaka_region_0\">bar</p>\n"
+      "end=\"00:00:06.00\" region=\"_quortex_region_0\">bar</p>\n"
       "    </div>\n"
       "  </body>\n"
       "</tt>\n";

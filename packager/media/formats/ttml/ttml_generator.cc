@@ -16,7 +16,7 @@ namespace ttml {
 
 namespace {
 
-constexpr const char* kRegionIdPrefix = "_shaka_region_";
+constexpr const char* kRegionIdPrefix = "_quortex_region_";
 
 std::string ToTtmlTime(int64_t time, int32_t timescale) {
   int64_t remaining = time * 1000 / timescale;

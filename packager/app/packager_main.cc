@@ -39,7 +39,7 @@
 
 DEFINE_bool(dump_stream_info, false, "Dump demuxed stream info.");
 DEFINE_bool(licenses, false, "Dump licenses.");
-DEFINE_bool(quiet, false, "When enabled, LOG(INFO) output is suppressed.");
+DEFINE_bool(quiet, true, "When enabled, LOG(INFO) output is suppressed.");
 DEFINE_bool(use_fake_clock_for_muxer,
             false,
             "Set to true to use a fake clock for muxer. With this flag set, "

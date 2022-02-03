@@ -36,6 +36,9 @@ Status TtmlMuxer::WriteToFile(const std::string& filename, uint64_t* size) {
   generator_.Reset();
   *size = data.size();
 
+  // output to PIPE
+  std::cout << data << std::endl;
+
   if (!File::WriteStringToFile(filename.c_str(), data))
     return Status(error::FILE_FAILURE, "Failed to write " + filename);
   return Status::OK;
