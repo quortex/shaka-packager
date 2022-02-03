@@ -16,7 +16,7 @@
       # This may be necessary with static_link_binaries=1.
       'disable_fatal_linker_warnings%': '0',
       'libpackager_type%': 'static_library',
-      'static_link_binaries%': '0',
+      'static_link_binaries%': '1',
     },
 
     'shaka_code%': '<(shaka_code)',
