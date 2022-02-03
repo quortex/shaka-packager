@@ -32,6 +32,7 @@ RUN ninja -C src/out/Release
 
 # Copy only result binaries to our final image.
 FROM alpine:3.8
-RUN apk add --no-cache libstdc++ python c-ares-dev
+
+RUN apk add --no-cache libstdc++ python
 COPY --from=builder /shaka_packager/src/out/Release/packager \
                     /usr/bin/
