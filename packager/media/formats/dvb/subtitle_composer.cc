@@ -236,7 +236,7 @@ bool SubtitleComposer::GetSamples(
                            TextUnitType::kPercent);
     settings.height.emplace(height * 100.0f / display_height_,
                             TextUnitType::kPercent);
-
+    LOG(INFO) << "start : " << start << " end : " << end;
     samples->emplace_back(
         std::make_shared<TextSample>("", start, end, settings, body));
   }
