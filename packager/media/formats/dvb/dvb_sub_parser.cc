@@ -40,7 +40,8 @@ RgbaColor ConvertYuv(uint8_t Y, uint8_t Cr, uint8_t Cb, uint8_t T) {
 
 }  // namespace
 
-DvbSubParser::DvbSubParser() : last_pts_(0), timeout_(0) {}
+DvbSubParser::DvbSubParser()
+    : last_pts_(0), timeout_(0), previous_timeout_(0) {}
 
 DvbSubParser::~DvbSubParser() {}
 
@@ -72,8 +73,10 @@ bool DvbSubParser::Parse(DvbSubSegmentType segment_type,
 }
 
 bool DvbSubParser::Flush(std::vector<std::shared_ptr<TextSample>>* samples) {
-  RCHECK(composer_.GetSamples(last_pts_, last_pts_ + timeout_ * kMpeg2Timescale,
-                              samples));
+  RCHECK(composer_.GetSamples(
+      last_pts_, last_pts_ + previous_timeout_ * kMpeg2Timescale, samples));
+  LOG(INFO) << "flush clean object timeout "
+            << previous_timeout_ * kMpeg2Timescale;
   composer_.ClearObjects();
   return true;
 }
@@ -102,9 +105,14 @@ bool DvbSubParser::ParsePageComposition(
   if (page_state == 0x1 || page_state == 0x2) {
     // If this is a "acquisition point" or a "mode change", then this is a new
     // page and we should clear the old data.
+    RCHECK(composer_.GetSamples(
+        last_pts_, last_pts_ + previous_timeout_ * kMpeg2Timescale, samples));
+    composer_.ClearObjects();
+    LOG(INFO) << "clean object timeout " << previous_timeout_ * kMpeg2Timescale;
     RCHECK(composer_.GetSamples(last_pts_, pts, samples));
     composer_.ClearObjects();
     last_pts_ = pts;
+    previous_timeout_ = timeout_;
   }
 
   while (reader.bits_available() > 0u) {

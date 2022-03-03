@@ -82,6 +82,7 @@ class MediaSample {
   std::string ToString() const;
 
   int64_t dts() const {
+    LOG(ERROR) << "end of stream error 1";
     DCHECK(!end_of_stream());
     return dts_;
   }
@@ -89,6 +90,7 @@ class MediaSample {
   void set_dts(int64_t dts) { dts_ = dts; }
 
   int64_t pts() const {
+    LOG(ERROR) << "end of stream error 2";
     DCHECK(!end_of_stream());
     return pts_;
   }
@@ -96,30 +98,36 @@ class MediaSample {
   void set_pts(int64_t pts) { pts_ = pts; }
 
   int64_t duration() const {
+    LOG(ERROR) << "end of stream error 3";
     DCHECK(!end_of_stream());
     return duration_;
   }
 
   void set_duration(int64_t duration) {
+    LOG(ERROR) << "end of stream error 4";
     DCHECK(!end_of_stream());
     duration_ = duration;
   }
 
   bool is_key_frame() const {
+    LOG(ERROR) << "end of stream error 5";
     DCHECK(!end_of_stream());
     return is_key_frame_;
   }
 
   bool is_encrypted() const {
+    LOG(ERROR) << "end of stream error 6";
     DCHECK(!end_of_stream());
     return is_encrypted_;
   }
   const uint8_t* data() const {
+    LOG(ERROR) << "end of stream error 7";
     DCHECK(!end_of_stream());
     return data_.get();
   }
 
   size_t data_size() const {
+    LOG(ERROR) << "end of stream error 8";
     DCHECK(!end_of_stream());
     return data_size_;
   }

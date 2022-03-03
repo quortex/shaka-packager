@@ -78,6 +78,7 @@ class DvbSubParser {
   SubtitleComposer composer_;
   int64_t last_pts_;
   uint8_t timeout_;
+  uint8_t previous_timeout_;
 };
 
 }  // namespace media
