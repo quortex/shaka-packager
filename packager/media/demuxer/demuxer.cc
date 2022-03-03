@@ -115,7 +115,6 @@ Status Demuxer::Run() {
   if (cancelled_ && status.ok())
     return Status(error::CANCELLED, "Demuxer run cancelled");
 
-  LOG(ERROR) << "status error code" << status.error_code();
   if (status.error_code() == error::END_OF_STREAM) {
     for (size_t stream_index : stream_indexes_) {
       status = FlushDownstream(stream_index);
