@@ -119,6 +119,7 @@ Status Demuxer::Run() {
     for (size_t stream_index : stream_indexes_) {
       status = FlushDownstream(stream_index);
       if (!status.ok())
+        LOG(INFO) << "RBE status EOS error";
         return status;
     }
     return Status::OK;
@@ -387,6 +388,7 @@ Status Demuxer::Parse() {
   if (bytes_read == 0) {
     if (!parser_->Flush())
       return Status(error::PARSER_FAILURE, "Failed to flush.");
+    LOG(INFO) << "RBE parse : status EOS error";
     return Status(error::END_OF_STREAM, "");
   } else if (bytes_read < 0) {
     return Status(error::FILE_FAILURE, "Cannot read file " + file_name_);
