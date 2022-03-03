@@ -93,15 +93,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a13a496b879b2207d4b68309fc19e4a50"><td class="memItemLeft" align="right" valign="top"><a id="a13a496b879b2207d4b68309fc19e4a50"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MOCK_METHOD2</b> (<a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#ae10c06fe6022a1020fc889de389be430">NotifyNewContainer</a>, bool(const MediaInfo &amp;media_info, uint32_t *container_id))</td></tr>
 <tr class="separator:a13a496b879b2207d4b68309fc19e4a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab510838c79de7c87bcba6c942143fdb4"><td class="memItemLeft" align="right" valign="top"><a id="ab510838c79de7c87bcba6c942143fdb4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MOCK_METHOD2</b> (<a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#a721edf600dc9165e96e4b6c154a2d4f6">NotifySampleDuration</a>, bool(uint32_t container_id, uint32_t sample_duration))</td></tr>
-<tr class="separator:ab510838c79de7c87bcba6c942143fdb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38518d315c6340117c0de174af842b8c"><td class="memItemLeft" align="right" valign="top"><a id="a38518d315c6340117c0de174af842b8c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MOCK_METHOD4</b> (<a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#a100236a249477afcda4f50e4914f0eee">NotifyNewSegment</a>, bool(uint32_t container_id, uint64_t start_time, uint64_t duration, uint64_t size))</td></tr>
-<tr class="separator:a38518d315c6340117c0de174af842b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a517bc445db0b88116fced425c31256e7"><td class="memItemLeft" align="right" valign="top"><a id="a517bc445db0b88116fced425c31256e7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MOCK_METHOD2</b> (<a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#a74fed9807b9584387e5da5f0fd28d54d">NotifyCueEvent</a>, bool(uint32_t container_id, uint64_t timestamp))</td></tr>
-<tr class="separator:a517bc445db0b88116fced425c31256e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ad91033558bfcf6486bfba74c8cf990"><td class="memItemLeft" align="right" valign="top"><a id="a2ad91033558bfcf6486bfba74c8cf990"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MOCK_METHOD2</b> (<a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#a34174454309777dea6531f6d7923f6d4">NotifySampleDuration</a>, bool(uint32_t container_id, int32_t sample_duration))</td></tr>
+<tr class="separator:a2ad91033558bfcf6486bfba74c8cf990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff74cfff31ea21a9a821f8ff0419604f"><td class="memItemLeft" align="right" valign="top"><a id="aff74cfff31ea21a9a821f8ff0419604f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MOCK_METHOD4</b> (<a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#aee3c5fef6f0436a538a3365a23388ea0">NotifyNewSegment</a>, bool(uint32_t container_id, int64_t start_time, int64_t duration, uint64_t size))</td></tr>
+<tr class="separator:aff74cfff31ea21a9a821f8ff0419604f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1caec0da6e47901eca278a686e645014"><td class="memItemLeft" align="right" valign="top"><a id="a1caec0da6e47901eca278a686e645014"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MOCK_METHOD3</b> (<a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#aabefa8a0a697d3a8a82fa11dd7e771ec">NotifyCompletedSegment</a>, bool(uint32_t container_id, int64_t duration, uint64_t size))</td></tr>
+<tr class="separator:a1caec0da6e47901eca278a686e645014"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79522ca25f23e614fe193c84a1a43523"><td class="memItemLeft" align="right" valign="top"><a id="a79522ca25f23e614fe193c84a1a43523"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MOCK_METHOD1</b> (<a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#acafa6cf3bb5f5fcc6195759ef1458bda">NotifyAvailabilityTimeOffset</a>, bool(uint32_t container_id))</td></tr>
+<tr class="separator:a79522ca25f23e614fe193c84a1a43523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0f1e769ac321bf0d71cb2670d2c1aef"><td class="memItemLeft" align="right" valign="top"><a id="ad0f1e769ac321bf0d71cb2670d2c1aef"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MOCK_METHOD1</b> (<a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#adce30b307fa9663556257f314c66043f">NotifySegmentDuration</a>, bool(uint32_t container_id))</td></tr>
+<tr class="separator:ad0f1e769ac321bf0d71cb2670d2c1aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afad2451cf338853d494fa2a4bfce29e4"><td class="memItemLeft" align="right" valign="top"><a id="afad2451cf338853d494fa2a4bfce29e4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MOCK_METHOD2</b> (<a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#ad6831a12867a69d4a713408d9f437947">NotifyCueEvent</a>, bool(uint32_t container_id, int64_t timestamp))</td></tr>
+<tr class="separator:afad2451cf338853d494fa2a4bfce29e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04b7ece7b40d0d18cfe54041fc82f949"><td class="memItemLeft" align="right" valign="top"><a id="a04b7ece7b40d0d18cfe54041fc82f949"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MOCK_METHOD4</b> (<a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#acf6a0bde4fc907053cc9f1ff9a38b59a">NotifyEncryptionUpdate</a>, bool(uint32_t container_id, const std::string &amp;drm_uuid, const std::vector&lt; uint8_t &gt; &amp;new_key_id, const std::vector&lt; uint8_t &gt; &amp;new_pssh))</td></tr>
 <tr class="separator:a04b7ece7b40d0d18cfe54041fc82f949"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -119,12 +128,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad6171481d6fb437767b1f5b9e0dac1a3 inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae10c06fe6022a1020fc889de389be430 inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#ae10c06fe6022a1020fc889de389be430">NotifyNewContainer</a> (const MediaInfo &amp;media_info, uint32_t *container_id)=0</td></tr>
 <tr class="separator:ae10c06fe6022a1020fc889de389be430 inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a721edf600dc9165e96e4b6c154a2d4f6 inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#a721edf600dc9165e96e4b6c154a2d4f6">NotifySampleDuration</a> (uint32_t container_id, uint32_t sample_duration)=0</td></tr>
-<tr class="separator:a721edf600dc9165e96e4b6c154a2d4f6 inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a100236a249477afcda4f50e4914f0eee inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#a100236a249477afcda4f50e4914f0eee">NotifyNewSegment</a> (uint32_t container_id, uint64_t start_time, uint64_t duration, uint64_t size)=0</td></tr>
-<tr class="separator:a100236a249477afcda4f50e4914f0eee inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74fed9807b9584387e5da5f0fd28d54d inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#a74fed9807b9584387e5da5f0fd28d54d">NotifyCueEvent</a> (uint32_t container_id, uint64_t timestamp)=0</td></tr>
-<tr class="separator:a74fed9807b9584387e5da5f0fd28d54d inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acafa6cf3bb5f5fcc6195759ef1458bda inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#acafa6cf3bb5f5fcc6195759ef1458bda">NotifyAvailabilityTimeOffset</a> (uint32_t container_id)</td></tr>
+<tr class="separator:acafa6cf3bb5f5fcc6195759ef1458bda inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34174454309777dea6531f6d7923f6d4 inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#a34174454309777dea6531f6d7923f6d4">NotifySampleDuration</a> (uint32_t container_id, int32_t sample_duration)=0</td></tr>
+<tr class="separator:a34174454309777dea6531f6d7923f6d4 inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adce30b307fa9663556257f314c66043f inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#adce30b307fa9663556257f314c66043f">NotifySegmentDuration</a> (uint32_t container_id)</td></tr>
+<tr class="separator:adce30b307fa9663556257f314c66043f inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee3c5fef6f0436a538a3365a23388ea0 inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#aee3c5fef6f0436a538a3365a23388ea0">NotifyNewSegment</a> (uint32_t container_id, int64_t start_time, int64_t duration, uint64_t size)=0</td></tr>
+<tr class="separator:aee3c5fef6f0436a538a3365a23388ea0 inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabefa8a0a697d3a8a82fa11dd7e771ec inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#aabefa8a0a697d3a8a82fa11dd7e771ec">NotifyCompletedSegment</a> (uint32_t container_id, int64_t duration, uint64_t size)</td></tr>
+<tr class="separator:aabefa8a0a697d3a8a82fa11dd7e771ec inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6831a12867a69d4a713408d9f437947 inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#ad6831a12867a69d4a713408d9f437947">NotifyCueEvent</a> (uint32_t container_id, int64_t timestamp)=0</td></tr>
+<tr class="separator:ad6831a12867a69d4a713408d9f437947 inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf6a0bde4fc907053cc9f1ff9a38b59a inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#acf6a0bde4fc907053cc9f1ff9a38b59a">NotifyEncryptionUpdate</a> (uint32_t container_id, const std::string &amp;drm_uuid, const std::vector&lt; uint8_t &gt; &amp;new_key_id, const std::vector&lt; uint8_t &gt; &amp;new_pssh)=0</td></tr>
 <tr class="separator:acf6a0bde4fc907053cc9f1ff9a38b59a inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d55e7b557c624954b4e05edf6bd83d1 inherit pub_methods_classshaka_1_1MpdNotifier"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#a4d55e7b557c624954b4e05edf6bd83d1">NotifyMediaInfoUpdate</a> (uint32_t container_id, const MediaInfo &amp;media_info)=0</td></tr>
@@ -150,7 +165,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:05 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:15 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

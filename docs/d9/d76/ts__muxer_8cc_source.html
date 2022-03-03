@@ -82,7 +82,7 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>mp2t {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">const</span> uint32_t kTsTimescale = 90000;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">const</span> int32_t kTsTimescale = 90000;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}  <span class="comment">// namespace</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;TsMuxer::TsMuxer(<span class="keyword">const</span> MuxerOptions&amp; muxer_options) : Muxer(muxer_options) {}</div>
@@ -109,7 +109,7 @@ $(function() {
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    sample_durations_[num_samples_] =</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        sample.duration() * kTsTimescale / streams().front()-&gt;time_scale();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">if</span> (num_samples_ == 1 &amp;&amp; muxer_listener())</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      muxer_listener()-&gt;<a class="code" href="../../dd/d7a/classshaka_1_1media_1_1MuxerListener.html#ad54aef6c349082d996a436ebea11eff2">OnSampleDurationReady</a>(sample_durations_[num_samples_]);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      muxer_listener()-&gt;<a class="code" href="../../dd/d7a/classshaka_1_1media_1_1MuxerListener.html#aa29d356ffd3a1639ab88e0ad97968135">OnSampleDurationReady</a>(sample_durations_[num_samples_]);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    num_samples_++;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  }</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">return</span> segmenter_-&gt;AddSample(sample);</div>
@@ -127,7 +127,7 @@ $(function() {
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> TsMuxer::FireOnMediaStartEvent() {</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">if</span> (!muxer_listener())</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  muxer_listener()-&gt;<a class="code" href="../../dd/d7a/classshaka_1_1media_1_1MuxerListener.html#a31536ec385a7ec22f323a42b872b499a">OnMediaStart</a>(options(), *streams().front(), kTsTimescale,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  muxer_listener()-&gt;<a class="code" href="../../dd/d7a/classshaka_1_1media_1_1MuxerListener.html#a5073c56728be37c32d7734439f4062c5">OnMediaStart</a>(options(), *streams().front(), kTsTimescale,</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                                 MuxerListener::kContainerMpeg2ts);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
@@ -146,12 +146,12 @@ $(function() {
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}  <span class="comment">// namespace shaka</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespaceshaka_html"><div class="ttname"><a href="../../d8/daf/namespaceshaka.html">shaka</a></div><div class="ttdoc">All the methods that are virtual are virtual for mocking.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d15/gflags__hex__bytes_8cc_source.html#l00011">gflags_hex_bytes.cc:11</a></div></div>
-<div class="ttc" id="aclassshaka_1_1media_1_1MuxerListener_html_ad54aef6c349082d996a436ebea11eff2"><div class="ttname"><a href="../../dd/d7a/classshaka_1_1media_1_1MuxerListener.html#ad54aef6c349082d996a436ebea11eff2">shaka::media::MuxerListener::OnSampleDurationReady</a></div><div class="ttdeci">virtual void OnSampleDurationReady(uint32_t sample_duration)=0</div></div>
+<div class="ttc" id="aclassshaka_1_1media_1_1MuxerListener_html_a5073c56728be37c32d7734439f4062c5"><div class="ttname"><a href="../../dd/d7a/classshaka_1_1media_1_1MuxerListener.html#a5073c56728be37c32d7734439f4062c5">shaka::media::MuxerListener::OnMediaStart</a></div><div class="ttdeci">virtual void OnMediaStart(const MuxerOptions &amp;muxer_options, const StreamInfo &amp;stream_info, int32_t time_scale, ContainerType container_type)=0</div></div>
 <div class="ttc" id="aclassshaka_1_1media_1_1MuxerListener_html_a11d4301cd53ab421f524bfa143eac21a"><div class="ttname"><a href="../../dd/d7a/classshaka_1_1media_1_1MuxerListener.html#a11d4301cd53ab421f524bfa143eac21a">shaka::media::MuxerListener::OnMediaEnd</a></div><div class="ttdeci">virtual void OnMediaEnd(const MediaRanges &amp;media_ranges, float duration_seconds)=0</div></div>
-<div class="ttc" id="aclassshaka_1_1media_1_1MuxerListener_html_a31536ec385a7ec22f323a42b872b499a"><div class="ttname"><a href="../../dd/d7a/classshaka_1_1media_1_1MuxerListener.html#a31536ec385a7ec22f323a42b872b499a">shaka::media::MuxerListener::OnMediaStart</a></div><div class="ttdeci">virtual void OnMediaStart(const MuxerOptions &amp;muxer_options, const StreamInfo &amp;stream_info, uint32_t time_scale, ContainerType container_type)=0</div></div>
+<div class="ttc" id="aclassshaka_1_1media_1_1MuxerListener_html_aa29d356ffd3a1639ab88e0ad97968135"><div class="ttname"><a href="../../dd/d7a/classshaka_1_1media_1_1MuxerListener.html#aa29d356ffd3a1639ab88e0ad97968135">shaka::media::MuxerListener::OnSampleDurationReady</a></div><div class="ttdeci">virtual void OnSampleDurationReady(int32_t sample_duration)=0</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:04 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:14 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

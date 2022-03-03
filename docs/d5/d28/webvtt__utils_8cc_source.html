@@ -97,7 +97,7 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                          uint64_t minutes,</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                          uint64_t seconds,</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                          uint64_t ms,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                          uint64_t* out) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                          int64_t* out) {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  DCHECK(out);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">if</span> (minutes &gt; 59 || seconds &gt; 59 || ms &gt; 999) {</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    VLOG(1) &lt;&lt; <span class="stringliteral">&quot;Hours:&quot;</span> &lt;&lt; hours &lt;&lt; <span class="stringliteral">&quot; Minutes:&quot;</span> &lt;&lt; minutes</div>
@@ -231,7 +231,7 @@ $(function() {
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}  <span class="comment">// namespace</span></div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keywordtype">bool</span> WebVttTimestampToMs(<span class="keyword">const</span> base::StringPiece&amp; source, uint64_t* out) {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keywordtype">bool</span> WebVttTimestampToMs(<span class="keyword">const</span> base::StringPiece&amp; source, int64_t* out) {</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  DCHECK(out);</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordflow">if</span> (source.length() &lt; 9) {</div>
@@ -411,7 +411,7 @@ $(function() {
 <div class="ttc" id="anamespaceshaka_html"><div class="ttname"><a href="../../d8/daf/namespaceshaka.html">shaka</a></div><div class="ttdoc">All the methods that are virtual are virtual for mocking.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d15/gflags__hex__bytes_8cc_source.html#l00011">gflags_hex_bytes.cc:11</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:04 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:14 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

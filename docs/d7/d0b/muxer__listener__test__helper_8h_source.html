@@ -141,7 +141,7 @@ $(function() {
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="stringliteral">&quot;  end: 9999\n&quot;</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="stringliteral">&quot;}\n&quot;</span>;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">const</span> uint32_t kDefaultReferenceTimeScale = 1000u;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">const</span> int32_t kDefaultReferenceTimeScale = 1000;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">// Struct that gets passed for to CreateVideoStreamInfo() to create a</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">// StreamInfo instance. Useful for generating multiple VideoStreamInfo with</span></div>
@@ -150,8 +150,8 @@ $(function() {
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="../../d6/d26/structshaka_1_1media_1_1VideoStreamInfoParameters.html">VideoStreamInfoParameters</a>();</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  ~<a class="code" href="../../d6/d26/structshaka_1_1media_1_1VideoStreamInfoParameters.html">VideoStreamInfoParameters</a>();</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">int</span> track_id;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  uint32_t time_scale;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  uint64_t duration;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  int32_t time_scale;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  int64_t duration;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  Codec codec;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  std::string codec_string;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  std::string language;</div>
@@ -166,8 +166,8 @@ $(function() {
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="../../df/d6d/structshaka_1_1media_1_1OnNewSegmentParameters.html">   96</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../df/d6d/structshaka_1_1media_1_1OnNewSegmentParameters.html">OnNewSegmentParameters</a> {</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  std::string file_name;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  uint64_t start_time;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  uint64_t duration;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  int64_t start_time;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  int64_t duration;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  uint64_t segment_file_size;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
@@ -207,7 +207,7 @@ $(function() {
 <div class="ttc" id="astructshaka_1_1media_1_1VideoStreamInfoParameters_html"><div class="ttname"><a href="../../d6/d26/structshaka_1_1media_1_1VideoStreamInfoParameters.html">shaka::media::VideoStreamInfoParameters</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0b/muxer__listener__test__helper_8h_source.html#l00078">muxer_listener_test_helper.h:78</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:04 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:14 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

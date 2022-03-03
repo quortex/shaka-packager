@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Low Latency DASH (LL-DASH) Streaming &#8212; Shaka Packager  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc_new.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/table_styling.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Design" href="../design.html" />
+    <link rel="prev" title="HTTP upload" href="http_upload.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../design.html" title="Design"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="http_upload.html" title="HTTP upload"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Shaka Packager  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="tutorials.html" accesskey="U">Tutorials</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Low Latency DASH (LL-DASH) Streaming</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="low-latency-dash-ll-dash-streaming">
+<h1>Low Latency DASH (LL-DASH) Streaming<a class="headerlink" href="#low-latency-dash-ll-dash-streaming" title="Permalink to this headline">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>If <code class="docutils literal notranslate"><span class="pre">--low_latency_dash_mode</span></code> is enabled, low latency DASH (LL-DASH) packaging will be used.</p>
+<p>This will reduce overall latency by ensuring that the media segments are chunk encoded and delivered via an aggregating response.
+The combination of these features will ensure that overall latency can be decoupled from the segment duration.
+For low latency to be achieved, the output of Shaka Packager must be combined with a delivery system which can chain together a set of aggregating responses, such as chunked transfer encoding under HTTP/1.1 or a HTTP/2 or HTTP/3 connection.
+The output of Shaka Packager must be played with a DASH client that understands the availabilityTimeOffset MPD value.
+Furthermore, the player should also understand the throughput estimation and ABR challenges that arise when operating in the low latency regime.</p>
+<p>This tutorial covers LL-DASH packaging and uses features from the DASH, HTTP upload, and FFmpeg piping tutorials.
+For more information on DASH, see <a class="reference internal" href="dash.html"><span class="doc">DASH</span></a>; for HTTP upload, see <a class="reference internal" href="http_upload.html"><span class="doc">HTTP upload</span></a>;
+for FFmpeg piping, see <a class="reference internal" href="ffmpeg_piping.html"><span class="doc">FFmpeg piping</span></a>;
+for full documentation, see <a class="reference internal" href="../documentation.html"><span class="doc">Packager Documentation</span></a>.</p>
+</section>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<section id="getting-started">
+<h3>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h3>
+<p>To enable LL-DASH mode, set the <code class="docutils literal notranslate"><span class="pre">--low_latency_dash_mode</span></code> flag to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<p>All HTTP requests will use chunked transfer encoding:
+<code class="docutils literal notranslate"><span class="pre">Transfer-Encoding:</span> <span class="pre">chunked</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only LL-DASH is supported. LL-HLS support is yet to come.</p>
+</div>
+</section>
+<section id="synopsis">
+<h3>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h3>
+<p>Here is a basic example of the LL-DASH support.
+The LL-DASH setup borrows features from “FFmpeg piping” and “HTTP upload”,
+see <a class="reference internal" href="ffmpeg_piping.html"><span class="doc">FFmpeg piping</span></a> and <a class="reference internal" href="http_upload.html"><span class="doc">HTTP upload</span></a>.</p>
+<p>Define UNIX pipe to connect ffmpeg with packager:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PIPE=/tmp/bigbuckbunny.fifo
+mkfifo ${PIPE}
+</pre></div>
+</div>
+<p>Acquire and transcode RTMP stream:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ffmpeg -fflags nobuffer -threads 0 -y \
+    -i rtmp://184.72.239.149/vod/mp4:bigbuckbunny_450.mp4 \
+    -pix_fmt yuv420p -vcodec libx264 -preset:v superfast -acodec aac \
+    -f mpegts pipe: &gt; ${PIPE}
+</pre></div>
+</div>
+<p>Configure and run packager:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define upload URL</span>
+<span class="n">export</span> <span class="n">UPLOAD_URL</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">6767</span><span class="o">/</span><span class="n">ll</span><span class="o">-</span><span class="n">dash</span>
+
+<span class="c1"># Go</span>
+<span class="n">packager</span> \
+    <span class="s2">&quot;input=$</span><span class="si">{PIPE}</span><span class="s2">,stream=audio,init_segment=$</span><span class="si">{UPLOAD_URL}</span><span class="s2">_init.m4s,segment_template=$</span><span class="si">{UPLOAD_URL}</span><span class="s2">/bigbuckbunny-audio-aac-\$Number</span><span class="si">%04d</span><span class="s2">\$.m4s&quot;</span> \
+    <span class="s2">&quot;input=$</span><span class="si">{PIPE}</span><span class="s2">,stream=video,init_segment=$</span><span class="si">{UPLOAD_URL}</span><span class="s2">_init.m4s,segment_template=$</span><span class="si">{UPLOAD_URL}</span><span class="s2">/bigbuckbunny-video-h264-450-\$Number</span><span class="si">%04d</span><span class="s2">\$.m4s&quot;</span> \
+    <span class="o">--</span><span class="n">io_block_size</span> <span class="mi">65536</span> \
+    <span class="o">--</span><span class="n">segment_duration</span> <span class="mi">2</span> \
+    <span class="o">--</span><span class="n">low_latency_dash_mode</span><span class="o">=</span><span class="n">true</span> \
+    <span class="o">--</span><span class="n">utc_timings</span> <span class="s2">&quot;urn:mpeg:dash:utc:http-xsdate:2014&quot;</span><span class="o">=</span><span class="s2">&quot;https://time.akamai.com/?iso&quot;</span> \
+    <span class="o">--</span><span class="n">mpd_output</span> <span class="s2">&quot;$</span><span class="si">{UPLOAD_URL}</span><span class="s2">/bigbuckbunny.mpd&quot;</span> \
+</pre></div>
+</div>
+</section>
+</section>
+<section id="low-latency-compatibility">
+<h2>Low Latency Compatibility<a class="headerlink" href="#low-latency-compatibility" title="Permalink to this headline">¶</a></h2>
+<p>For low latency to be achieved, the processes handling Shaka Packager’s output, such as the server and player,
+must support LL-DASH streaming.</p>
+<section id="delivery-pipeline">
+<h3>Delivery Pipeline<a class="headerlink" href="#delivery-pipeline" title="Permalink to this headline">¶</a></h3>
+<p>Shaka Packager will upload the LL-DASH content to the specified output via HTTP chunked transfer encoding.
+The server must have the ability to handle this type of request. If using a proxy or shim for cloud authentication,
+these services must also support HTTP chunked transfer encoding.</p>
+<p>Examples of supporting content delivery systems:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://aws.amazon.com/mediastore/">AWS MediaStore</a></p></li>
+<li><p><a class="reference external" href="https://github.com/fsouza/s3-upload-proxy">s3-upload-proxy</a></p></li>
+<li><p><a class="reference external" href="https://github.com/streamlinevideo/low-latency-preview">Streamline Low Latency DASH preview</a></p></li>
+<li><p><a class="reference external" href="https://github.com/mjneil/go-chunked-streaming-server">go-chunked-streaming-server</a></p></li>
+</ul>
+</section>
+<section id="player">
+<h3>Player<a class="headerlink" href="#player" title="Permalink to this headline">¶</a></h3>
+<p>The player must support LL-DASH playout.
+LL-DASH requires the player to be able to interpret <code class="docutils literal notranslate"><span class="pre">availabilityTimeOffset</span></code> values from the DASH MPD.
+The player should also recognize the the throughput estimation and ABR challenges that arise with low latency streaming.</p>
+<p>Examples of supporting players:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/google/shaka-player">Shaka Player</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Dash-Industry-Forum/dash.js">dash.js</a></p></li>
+<li><p><a class="reference external" href="https://github.com/streamlinevideo/low-latency-preview">Streamline Low Latency DASH preview</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Low Latency DASH (LL-DASH) Streaming</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#documentation">Documentation</a><ul>
+<li><a class="reference internal" href="#getting-started">Getting started</a></li>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#low-latency-compatibility">Low Latency Compatibility</a><ul>
+<li><a class="reference internal" href="#delivery-pipeline">Delivery Pipeline</a></li>
+<li><a class="reference internal" href="#player">Player</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="http_upload.html"
+                          title="previous chapter">HTTP upload</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../design.html"
+                          title="next chapter">Design</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/tutorials/low_latency.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../design.html" title="Design"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="http_upload.html" title="HTTP upload"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Shaka Packager  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="tutorials.html" >Tutorials</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Low Latency DASH (LL-DASH) Streaming</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Google.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

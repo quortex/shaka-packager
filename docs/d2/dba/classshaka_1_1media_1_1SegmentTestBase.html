@@ -111,18 +111,18 @@ template&lt;typename S &gt; </td></tr>
 <tr class="memitem:a89f8406b8a174eb5bdc611bec92f9f4f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/dba/classshaka_1_1media_1_1SegmentTestBase.html#a89f8406b8a174eb5bdc611bec92f9f4f">CreateAndInitializeSegmenter</a> (const <a class="el" href="../../d0/d27/structshaka_1_1media_1_1MuxerOptions.html">MuxerOptions</a> &amp;options, const <a class="el" href="../../d5/db1/classshaka_1_1media_1_1StreamInfo.html">StreamInfo</a> &amp;info, std::unique_ptr&lt; <a class="el" href="../../dd/dc5/classshaka_1_1media_1_1webm_1_1Segmenter.html">webm::Segmenter</a> &gt; *result) const</td></tr>
 <tr class="memdesc:a89f8406b8a174eb5bdc611bec92f9f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Segmenter of the given type and initializes it. <br /></td></tr>
 <tr class="separator:a89f8406b8a174eb5bdc611bec92f9f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd8845d029698f556ca09436da0c62ef"><td class="memItemLeft" align="right" valign="top"><a id="afd8845d029698f556ca09436da0c62ef"></a>
-std::shared_ptr&lt; <a class="el" href="../../d7/d6d/classshaka_1_1media_1_1MediaSample.html">MediaSample</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dba/classshaka_1_1media_1_1SegmentTestBase.html#afd8845d029698f556ca09436da0c62ef">CreateSample</a> (KeyFrameFlag key_frame_flag, uint64_t duration, SideDataFlag side_data_flag)</td></tr>
-<tr class="memdesc:afd8845d029698f556ca09436da0c62ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new media sample. <br /></td></tr>
-<tr class="separator:afd8845d029698f556ca09436da0c62ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af041d380b5c69e240abf24ed2736b88c"><td class="memItemLeft" align="right" valign="top"><a id="af041d380b5c69e240abf24ed2736b88c"></a>
+std::shared_ptr&lt; <a class="el" href="../../d7/d6d/classshaka_1_1media_1_1MediaSample.html">MediaSample</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dba/classshaka_1_1media_1_1SegmentTestBase.html#af041d380b5c69e240abf24ed2736b88c">CreateSample</a> (KeyFrameFlag key_frame_flag, int64_t duration, SideDataFlag side_data_flag)</td></tr>
+<tr class="memdesc:af041d380b5c69e240abf24ed2736b88c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new media sample. <br /></td></tr>
+<tr class="separator:af041d380b5c69e240abf24ed2736b88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87fefed1921b0dad84b1d082e30cce37"><td class="memItemLeft" align="right" valign="top"><a id="a87fefed1921b0dad84b1d082e30cce37"></a>
 <a class="el" href="../../d0/d27/structshaka_1_1media_1_1MuxerOptions.html">MuxerOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dba/classshaka_1_1media_1_1SegmentTestBase.html#a87fefed1921b0dad84b1d082e30cce37">CreateMuxerOptions</a> () const</td></tr>
 <tr class="memdesc:a87fefed1921b0dad84b1d082e30cce37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="../../df/d46/classshaka_1_1media_1_1Muxer.html">Muxer</a> options object for testing. <br /></td></tr>
 <tr class="separator:a87fefed1921b0dad84b1d082e30cce37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeba2d28eb9f605bae1536e13c1cac950"><td class="memItemLeft" align="right" valign="top"><a id="aeba2d28eb9f605bae1536e13c1cac950"></a>
-<a class="el" href="../../d6/db1/classshaka_1_1media_1_1VideoStreamInfo.html">VideoStreamInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dba/classshaka_1_1media_1_1SegmentTestBase.html#aeba2d28eb9f605bae1536e13c1cac950">CreateVideoStreamInfo</a> (uint32_t time_scale) const</td></tr>
-<tr class="memdesc:aeba2d28eb9f605bae1536e13c1cac950"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a video stream info object for testing. <br /></td></tr>
-<tr class="separator:aeba2d28eb9f605bae1536e13c1cac950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c4c15c970d7c3f45baf72c432e6691"><td class="memItemLeft" align="right" valign="top"><a id="a12c4c15c970d7c3f45baf72c432e6691"></a>
+<a class="el" href="../../d6/db1/classshaka_1_1media_1_1VideoStreamInfo.html">VideoStreamInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dba/classshaka_1_1media_1_1SegmentTestBase.html#a12c4c15c970d7c3f45baf72c432e6691">CreateVideoStreamInfo</a> (int32_t time_scale) const</td></tr>
+<tr class="memdesc:a12c4c15c970d7c3f45baf72c432e6691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a video stream info object for testing. <br /></td></tr>
+<tr class="separator:a12c4c15c970d7c3f45baf72c432e6691"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d4178714145fa2d18821840db8fb2a6"><td class="memItemLeft" align="right" valign="top"><a id="a8d4178714145fa2d18821840db8fb2a6"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dba/classshaka_1_1media_1_1SegmentTestBase.html#a8d4178714145fa2d18821840db8fb2a6">OutputFileName</a> () const</td></tr>
 <tr class="memdesc:a8d4178714145fa2d18821840db8fb2a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the file name of the current output file. <br /></td></tr>
@@ -131,9 +131,9 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dba/classshaka_1_1media_1_1SegmentTestBase.html#a08c5db7b7f28da29ca40147cf8673a7a">TemplateFileName</a> (int number) const</td></tr>
 <tr class="memdesc:a08c5db7b7f28da29ca40147cf8673a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the file name of the given template file. <br /></td></tr>
 <tr class="separator:a08c5db7b7f28da29ca40147cf8673a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09bee5db28093d1d841e592c1f7df11d"><td class="memItemLeft" align="right" valign="top"><a id="a09bee5db28093d1d841e592c1f7df11d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_cur_timestamp</b> (uint64_t timestamp)</td></tr>
-<tr class="separator:a09bee5db28093d1d841e592c1f7df11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd72883ececda13999d02b2e3001d1d1"><td class="memItemLeft" align="right" valign="top"><a id="acd72883ececda13999d02b2e3001d1d1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_cur_timestamp</b> (int64_t timestamp)</td></tr>
+<tr class="separator:acd72883ececda13999d02b2e3001d1d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -143,9 +143,9 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>output_file_na
 <tr class="memitem:a4b0873e7c733b3c45b5aeadec4c76c7a"><td class="memItemLeft" align="right" valign="top"><a id="a4b0873e7c733b3c45b5aeadec4c76c7a"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>segment_template_</b></td></tr>
 <tr class="separator:a4b0873e7c733b3c45b5aeadec4c76c7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27591b463fcb7029e23c472839482400"><td class="memItemLeft" align="right" valign="top"><a id="a27591b463fcb7029e23c472839482400"></a>
-uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>cur_timestamp_</b></td></tr>
-<tr class="separator:a27591b463fcb7029e23c472839482400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdd9aa916f911df5f3c1fa480c9dba32"><td class="memItemLeft" align="right" valign="top"><a id="acdd9aa916f911df5f3c1fa480c9dba32"></a>
+int64_t&#160;</td><td class="memItemRight" valign="bottom"><b>cur_timestamp_</b></td></tr>
+<tr class="separator:acdd9aa916f911df5f3c1fa480c9dba32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae91bd23a2ffd05d10184b536cb35751a"><td class="memItemLeft" align="right" valign="top"><a id="ae91bd23a2ffd05d10184b536cb35751a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>single_segment_</b></td></tr>
 <tr class="separator:ae91bd23a2ffd05d10184b536cb35751a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,7 +160,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>single_segment_</b></
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:05 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:16 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

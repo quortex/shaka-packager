@@ -131,10 +131,10 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>id</b> () const</
 <tr class="separator:a960b899f0badc0b1623220e1caaa76eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4172e846f376783c39fe48230aefa8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/classshaka_1_1AdaptationSet.html#af4172e846f376783c39fe48230aefa8a">set_id</a> (uint32_t id)</td></tr>
 <tr class="separator:af4172e846f376783c39fe48230aefa8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcfb8f59204f6ec2f5dcd9cbd81dddf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/classshaka_1_1AdaptationSet.html#afcfb8f59204f6ec2f5dcd9cbd81dddf9">OnNewSegmentForRepresentation</a> (uint32_t representation_id, uint64_t start_time, uint64_t duration)</td></tr>
-<tr class="separator:afcfb8f59204f6ec2f5dcd9cbd81dddf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37904780833b552b7f95f124ffd10456"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/classshaka_1_1AdaptationSet.html#a37904780833b552b7f95f124ffd10456">OnSetFrameRateForRepresentation</a> (uint32_t representation_id, uint32_t frame_duration, uint32_t timescale)</td></tr>
-<tr class="separator:a37904780833b552b7f95f124ffd10456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c995f3419da05aac21b82bbe0951ccd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/classshaka_1_1AdaptationSet.html#a0c995f3419da05aac21b82bbe0951ccd">OnNewSegmentForRepresentation</a> (uint32_t representation_id, int64_t start_time, int64_t duration)</td></tr>
+<tr class="separator:a0c995f3419da05aac21b82bbe0951ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a445a6ccf8a4496c783480b73ffdbe3a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/classshaka_1_1AdaptationSet.html#a445a6ccf8a4496c783480b73ffdbe3a0">OnSetFrameRateForRepresentation</a> (uint32_t representation_id, int32_t frame_duration, int32_t timescale)</td></tr>
+<tr class="separator:a445a6ccf8a4496c783480b73ffdbe3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a834d1c61e34db517169b802b8a11eeda"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8e/classshaka_1_1AdaptationSet.html#a834d1c61e34db517169b802b8a11eeda">AddTrickPlayReference</a> (const <a class="el" href="../../d8/d8e/classshaka_1_1AdaptationSet.html">AdaptationSet</a> *adaptation_set)</td></tr>
 <tr class="separator:a834d1c61e34db517169b802b8a11eeda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4acfcdbaf3fbd87982398cfb14c5616c"><td class="memItemLeft" align="right" valign="top"><a id="a4acfcdbaf3fbd87982398cfb14c5616c"></a>
@@ -601,8 +601,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AdaptationSetTest</b
 
 </div>
 </div>
-<a id="afcfb8f59204f6ec2f5dcd9cbd81dddf9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcfb8f59204f6ec2f5dcd9cbd81dddf9">&#9670;&nbsp;</a></span>OnNewSegmentForRepresentation()</h2>
+<a id="a0c995f3419da05aac21b82bbe0951ccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c995f3419da05aac21b82bbe0951ccd">&#9670;&nbsp;</a></span>OnNewSegmentForRepresentation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -616,13 +616,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AdaptationSetTest</b
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramtype">int64_t&#160;</td>
           <td class="paramname"><em>start_time</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramtype">int64_t&#160;</td>
           <td class="paramname"><em>duration</em>&#160;</td>
         </tr>
         <tr>
@@ -645,8 +645,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AdaptationSetTest</b
 
 </div>
 </div>
-<a id="a37904780833b552b7f95f124ffd10456"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37904780833b552b7f95f124ffd10456">&#9670;&nbsp;</a></span>OnSetFrameRateForRepresentation()</h2>
+<a id="a445a6ccf8a4496c783480b73ffdbe3a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a445a6ccf8a4496c783480b73ffdbe3a0">&#9670;&nbsp;</a></span>OnSetFrameRateForRepresentation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -660,13 +660,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AdaptationSetTest</b
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype">int32_t&#160;</td>
           <td class="paramname"><em>frame_duration</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype">int32_t&#160;</td>
           <td class="paramname"><em>timescale</em>&#160;</td>
         </tr>
         <tr>
@@ -809,7 +809,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AdaptationSetTest</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:05 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:15 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

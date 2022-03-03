@@ -153,7 +153,7 @@ $(function() {
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dd/d1c/classshaka_1_1hls_1_1MediaPlaylist.html#acacd79e086a620c82101f1a0f3ba8df9">SetMediaInfo</a>(<span class="keyword">const</span> MediaInfo&amp; media_info);</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../dd/d1c/classshaka_1_1hls_1_1MediaPlaylist.html#a329a5fa45ab80e78545bafe3866efa71">SetSampleDuration</a>(uint32_t sample_duration);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../dd/d1c/classshaka_1_1hls_1_1MediaPlaylist.html#afe72fe1d47ac6bbacc73b851986ad4a0">SetSampleDuration</a>(int32_t sample_duration);</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../dd/d1c/classshaka_1_1hls_1_1MediaPlaylist.html#afecc7ca28e4eb44e69d5771cadd0e3b9">AddSegment</a>(<span class="keyword">const</span> std::string&amp; file_name,</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                          int64_t start_time,</div>
@@ -182,7 +182,7 @@ $(function() {
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="../../dd/d1c/classshaka_1_1hls_1_1MediaPlaylist.html#a6e848f7f91643ca6216b6618c4512124">GetLongestSegmentDuration</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../dd/d1c/classshaka_1_1hls_1_1MediaPlaylist.html#ae912291a5be66ae6256006654cc04dd6">SetTargetDuration</a>(uint32_t target_duration);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../dd/d1c/classshaka_1_1hls_1_1MediaPlaylist.html#acb20bdf41173b662297a4df665fe3d2b">SetTargetDuration</a>(int32_t target_duration);</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="../../dd/d1c/classshaka_1_1hls_1_1MediaPlaylist.html#a98b813343f29341e612fff2964cd0bb2">GetNumChannels</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
@@ -248,7 +248,7 @@ $(function() {
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <span class="keywordtype">int</span> discontinuity_sequence_number_ = 0;</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  <span class="keywordtype">double</span> longest_segment_duration_seconds_ = 0.0;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  uint32_t time_scale_ = 0;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  int32_t time_scale_ = 0;</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  BandwidthEstimator bandwidth_estimator_;</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
@@ -258,7 +258,7 @@ $(function() {
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="comment">// See SetTargetDuration() comments.</span></div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <span class="keywordtype">bool</span> target_duration_set_ = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  uint32_t target_duration_ = 0;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  int32_t target_duration_ = 0;</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="comment">// TODO(kqyang): This could be managed better by a separate class, than having</span></div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="comment">// all them managed in MediaPlaylist.</span></div>
@@ -285,12 +285,12 @@ $(function() {
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="preprocessor">#endif  // PACKAGER_HLS_BASE_MEDIA_PLAYLIST_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassshaka_1_1hls_1_1MediaPlaylist_html_a329a5fa45ab80e78545bafe3866efa71"><div class="ttname"><a href="../../dd/d1c/classshaka_1_1hls_1_1MediaPlaylist.html#a329a5fa45ab80e78545bafe3866efa71">shaka::hls::MediaPlaylist::SetSampleDuration</a></div><div class="ttdeci">virtual void SetSampleDuration(uint32_t sample_duration)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/media__playlist_8cc_source.html#l00403">media_playlist.cc:403</a></div></div>
+<div class="ttc" id="aclassshaka_1_1hls_1_1MediaPlaylist_html_afe72fe1d47ac6bbacc73b851986ad4a0"><div class="ttname"><a href="../../dd/d1c/classshaka_1_1hls_1_1MediaPlaylist.html#afe72fe1d47ac6bbacc73b851986ad4a0">shaka::hls::MediaPlaylist::SetSampleDuration</a></div><div class="ttdeci">virtual void SetSampleDuration(int32_t sample_duration)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/media__playlist_8cc_source.html#l00403">media_playlist.cc:403</a></div></div>
 <div class="ttc" id="aclassshaka_1_1hls_1_1MediaPlaylist_html_a505b247de5ec210a0f95d543cf7acc38"><div class="ttname"><a href="../../dd/d1c/classshaka_1_1hls_1_1MediaPlaylist.html#a505b247de5ec210a0f95d543cf7acc38">shaka::hls::MediaPlaylist::AddKeyFrame</a></div><div class="ttdeci">virtual void AddKeyFrame(int64_t timestamp, uint64_t start_byte_offset, uint64_t size)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/media__playlist_8cc_source.html#l00436">media_playlist.cc:436</a></div></div>
-<div class="ttc" id="aclassshaka_1_1hls_1_1MediaPlaylist_html_ae912291a5be66ae6256006654cc04dd6"><div class="ttname"><a href="../../dd/d1c/classshaka_1_1hls_1_1MediaPlaylist.html#ae912291a5be66ae6256006654cc04dd6">shaka::hls::MediaPlaylist::SetTargetDuration</a></div><div class="ttdeci">virtual void SetTargetDuration(uint32_t target_duration)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/media__playlist_8cc_source.html#l00509">media_playlist.cc:509</a></div></div>
 <div class="ttc" id="aclassshaka_1_1hls_1_1MediaPlaylist_html_ae8ca25b851b5df70830ed0c76168392b"><div class="ttname"><a href="../../dd/d1c/classshaka_1_1hls_1_1MediaPlaylist.html#ae8ca25b851b5df70830ed0c76168392b">shaka::hls::MediaPlaylist::GetAC4CbiFlag</a></div><div class="ttdeci">virtual bool GetAC4CbiFlag() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/media__playlist_8cc_source.html#l00532">media_playlist.cc:532</a></div></div>
 <div class="ttc" id="astructshaka_1_1HlsParams_html"><div class="ttname"><a href="../../d0/da8/structshaka_1_1HlsParams.html">shaka::HlsParams</a></div><div class="ttdoc">HLS related parameters.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d47/hls__params_8h_source.html#l00023">hls_params.h:23</a></div></div>
 <div class="ttc" id="aclassshaka_1_1hls_1_1MediaPlaylist_html_a26d93a17b322f88c9a10f8ee6bb8ba51"><div class="ttname"><a href="../../dd/d1c/classshaka_1_1hls_1_1MediaPlaylist.html#a26d93a17b322f88c9a10f8ee6bb8ba51">shaka::hls::MediaPlaylist::GetAC4ImsFlag</a></div><div class="ttdeci">virtual bool GetAC4ImsFlag() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/media__playlist_8cc_source.html#l00528">media_playlist.cc:528</a></div></div>
+<div class="ttc" id="aclassshaka_1_1hls_1_1MediaPlaylist_html_acb20bdf41173b662297a4df665fe3d2b"><div class="ttname"><a href="../../dd/d1c/classshaka_1_1hls_1_1MediaPlaylist.html#acb20bdf41173b662297a4df665fe3d2b">shaka::hls::MediaPlaylist::SetTargetDuration</a></div><div class="ttdeci">virtual void SetTargetDuration(int32_t target_duration)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/media__playlist_8cc_source.html#l00509">media_playlist.cc:509</a></div></div>
 <div class="ttc" id="aclassshaka_1_1hls_1_1MediaPlaylist_html_a499a495bcd51b4121585dfb2cc5861c1"><div class="ttname"><a href="../../dd/d1c/classshaka_1_1hls_1_1MediaPlaylist.html#a499a495bcd51b4121585dfb2cc5861c1">shaka::hls::MediaPlaylist::language</a></div><div class="ttdeci">const std::string &amp; language() const</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d4a/media__playlist_8h_source.html#l00218">media_playlist.h:218</a></div></div>
 <div class="ttc" id="anamespaceshaka_html"><div class="ttname"><a href="../../d8/daf/namespaceshaka.html">shaka</a></div><div class="ttdoc">All the methods that are virtual are virtual for mocking.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d15/gflags__hex__bytes_8cc_source.html#l00011">gflags_hex_bytes.cc:11</a></div></div>
 <div class="ttc" id="aclassshaka_1_1hls_1_1MediaPlaylist_html_acacd79e086a620c82101f1a0f3ba8df9"><div class="ttname"><a href="../../dd/d1c/classshaka_1_1hls_1_1MediaPlaylist.html#acacd79e086a620c82101f1a0f3ba8df9">shaka::hls::MediaPlaylist::SetMediaInfo</a></div><div class="ttdeci">virtual bool SetMediaInfo(const MediaInfo &amp;media_info)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/media__playlist_8cc_source.html#l00373">media_playlist.cc:373</a></div></div>
@@ -315,7 +315,7 @@ $(function() {
 <div class="ttc" id="aclassshaka_1_1hls_1_1MediaPlaylist_html_a2ab66ed311668017fd62d04db0476e79"><div class="ttname"><a href="../../dd/d1c/classshaka_1_1hls_1_1MediaPlaylist.html#a2ab66ed311668017fd62d04db0476e79">shaka::hls::MediaPlaylist::SetStreamTypeForTesting</a></div><div class="ttdeci">void SetStreamTypeForTesting(MediaPlaylistStreamType stream_type)</div><div class="ttdoc">For testing only.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df2/media__playlist_8cc_source.html#l00355">media_playlist.cc:355</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:03 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:13 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

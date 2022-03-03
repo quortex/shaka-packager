@@ -51,7 +51,10 @@
 dependencies mentioned here are only for Ubuntu. There are some instructions
 for <a class="reference external" href="#notes-for-other-linux-distros">other distros below</a>.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt-get update
-sudo apt-get install build-essential curl git python
+sudo apt-get install -y <span class="se">\</span>
+        curl <span class="se">\</span>
+        libc-ares-dev <span class="se">\</span>
+        build-essential git python python3
 </pre></div>
 </div>
 <p>Note that <code class="docutils literal notranslate"><span class="pre">Git</span></code> must be v1.7.5 or above.</p>
@@ -61,7 +64,7 @@ sudo apt-get install build-essential curl git python
 <ul>
 <li><p><a class="reference external" href="https://developer.apple.com/xcode">Xcode</a> 7.3+.</p></li>
 <li><p>The OS X 10.10 SDK or later. Run</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ ls <span class="sb">`</span>xcode-select -p<span class="sb">`</span>/Platforms/MacOSX.platform/Developer/SDKs
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ls <span class="sb">`</span>xcode-select -p<span class="sb">`</span>/Platforms/MacOSX.platform/Developer/SDKs
 </pre></div>
 </div>
 <p>to check whether you have it.</p>
@@ -97,13 +100,13 @@ with versions and paths adjusted to match your actual system:</p>
 <section id="linux-and-mac">
 <h3>Linux and Mac<a class="headerlink" href="#linux-and-mac" title="Permalink to this headline">¶</a></h3>
 <p>Clone the <code class="docutils literal notranslate"><span class="pre">depot_tools</span></code> repository from Chromium:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
 </pre></div>
 </div>
 <p>Add <code class="docutils literal notranslate"><span class="pre">depot_tools</span></code> to the end of your PATH (you will probably want to put this
 in your <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> or <code class="docutils literal notranslate"><span class="pre">~/.zshrc</span></code>). Assuming you cloned <code class="docutils literal notranslate"><span class="pre">depot_tools</span></code> to
 <code class="docutils literal notranslate"><span class="pre">/path/to/depot_tools</span></code>:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$PATH</span><span class="s2">:/path/to/depot_tools&quot;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$PATH</span><span class="s2">:/path/to/depot_tools&quot;</span>
 </pre></div>
 </div>
 </section>
@@ -125,9 +128,6 @@ that might already have a copy of Python or Git).</p>
 <p>If you don’t have Administrator access, you can add a user-level PATH
 environment variable and put <code class="docutils literal notranslate"><span class="pre">C:\src\depot_tools</span></code> at the front, but
 if your system PATH has a Python in it, you will be out of luck.</p>
-<p>Also, add a DEPOT_TOOLS_WIN_TOOLCHAIN system variable in the same way, and set
-it to 0. This tells depot_tools to use your locally installed version of Visual
-Studio (by default, depot_tools will try to use a google-internal version).</p>
 <p>From a cmd.exe shell, run the command gclient (without arguments). On first
 run, gclient will install all the Windows-specific bits needed to work with
 the code, including msysgit and python.</p>
@@ -146,21 +146,21 @@ you may want to
 <p>Create a <code class="docutils literal notranslate"><span class="pre">shaka_packager</span></code> directory for the checkout and change to it (you can
 call this whatever you like and put it wherever you like, as long as the full
 path has no spaces):</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ mkdir shaka_packager <span class="o">&amp;&amp;</span> <span class="nb">cd</span> shaka_packager
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir shaka_packager <span class="o">&amp;&amp;</span> <span class="nb">cd</span> shaka_packager
 </pre></div>
 </div>
 <p>Run the <code class="docutils literal notranslate"><span class="pre">gclient</span></code> tool from <code class="docutils literal notranslate"><span class="pre">depot_tools</span></code> to check out the code and its
 dependencies.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ gclient config https://www.github.com/google/shaka-packager.git --name<span class="o">=</span>src --unmanaged
-$ gclient sync
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gclient config https://www.github.com/google/shaka-packager.git --name<span class="o">=</span>src --unmanaged
+gclient sync
 </pre></div>
 </div>
 <p>To sync to a particular commit or version, add the ‘-r &lt;revision&gt;’ flag to
 <code class="docutils literal notranslate"><span class="pre">gclient</span> <span class="pre">sync</span></code>, e.g.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ gclient sync -r 4cb5326355e1559d60b46167740e04624d0d2f51
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gclient sync -r 4cb5326355e1559d60b46167740e04624d0d2f51
 </pre></div>
 </div>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ gclient sync -r v1.2.0
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gclient sync -r v1.2.0
 </pre></div>
 </div>
 <p>If you don’t want the full repo history, you can save some time by adding the
@@ -168,7 +168,7 @@ $ gclient sync
 <p>When the above commands completes, it will have created a hidden <code class="docutils literal notranslate"><span class="pre">.gclient</span></code> file
 and a directory called <code class="docutils literal notranslate"><span class="pre">src</span></code> in the working directory. The remaining
 instructions assume you have switched to the <code class="docutils literal notranslate"><span class="pre">src</span></code> directory:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> src
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> src
 </pre></div>
 </div>
 <section id="build-shaka-packager">
@@ -178,17 +178,13 @@ instructions assume you have switched to the <code class="docutils literal notra
 <p>Shaka Packager uses <a class="reference external" href="https://ninja-build.org">Ninja</a> as its main build tool,
 which is bundled in depot_tools.</p>
 <p>To build the code, run <code class="docutils literal notranslate"><span class="pre">ninja</span></code> command:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ ninja -C out/Release
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ninja -C out/Release
 </pre></div>
 </div>
 <p>If you want to build debug code, replace <code class="docutils literal notranslate"><span class="pre">Release</span></code> above with <code class="docutils literal notranslate"><span class="pre">Debug</span></code>.</p>
 <p>We also provide a mechanism to change build settings, for example,
 you can change build system to <code class="docutils literal notranslate"><span class="pre">make</span></code> by overriding <code class="docutils literal notranslate"><span class="pre">GYP_GENERATORS</span></code>:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ <span class="nv">GYP_GENERATORS</span><span class="o">=</span><span class="s1">&#39;make&#39;</span> gclient runhooks
-</pre></div>
-</div>
-<p>Another example, you can also disable clang by overriding <code class="docutils literal notranslate"><span class="pre">GYP_DEFINES</span></code>:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ <span class="nv">GYP_DEFINES</span><span class="o">=</span><span class="s1">&#39;clang=0&#39;</span> gclient runhooks
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">GYP_GENERATORS</span><span class="o">=</span><span class="s1">&#39;make&#39;</span> gclient runhooks
 </pre></div>
 </div>
 </section>
@@ -196,16 +192,16 @@ you can change build system to <code class="docutils literal notranslate"><span 
 <h4>Windows<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <p>The instructions are similar, except that Windows allows using either <code class="docutils literal notranslate"><span class="pre">/</span></code> or <code class="docutils literal notranslate"><span class="pre">\</span></code>
 as path separator:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ ninja -C out/Release
-$ ninja -C out<span class="se">\R</span>elease
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ninja -C out/Release
+ninja -C out<span class="se">\R</span>elease
 </pre></div>
 </div>
 <p>Also, unlike Linux / Mac, 32-bit is chosen by default even if the system is
 64-bit. 64-bit has to be enabled explicitly and the output directory is
 configured to <code class="docutils literal notranslate"><span class="pre">out/%CONFIGURATION%_x64</span></code>, i.e.:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ SET <span class="nv">GYP_DEFINES</span><span class="o">=</span><span class="s1">&#39;target_arch=x64&#39;</span> 
-$ gclient runhooks
-$ ninja -C out/Release_x64
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>SET <span class="nv">GYP_DEFINES</span><span class="o">=</span><span class="s1">&#39;target_arch=x64&#39;</span>
+gclient runhooks
+ninja -C out/Release_x64
 </pre></div>
 </div>
 </section>
@@ -221,8 +217,8 @@ on how to use <code class="docutils literal notranslate"><span class="pre">Shaka
 <section id="update-your-checkout">
 <h3>Update your checkout<a class="headerlink" href="#update-your-checkout" title="Permalink to this headline">¶</a></h3>
 <p>To update an existing checkout, you can run</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ git pull origin master --rebase
-$ gclient sync
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git pull origin master --rebase
+gclient sync
 </pre></div>
 </div>
 <p>The first command updates the primary Packager source repository and rebases on
@@ -236,15 +232,15 @@ hooks as needed.</p>
 <h2>Cross compiling for ARM on Ubuntu host<a class="headerlink" href="#cross-compiling-for-arm-on-ubuntu-host" title="Permalink to this headline">¶</a></h2>
 <p>The install-build-deps script can be used to install all the compiler
 and library dependencies directly from Ubuntu:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ ./packager/build/install-build-deps.sh
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./packager/build/install-build-deps.sh
 </pre></div>
 </div>
 <p>Install sysroot image and others using <code class="docutils literal notranslate"><span class="pre">gclient</span></code>:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ <span class="nv">GYP_CROSSCOMPILE</span><span class="o">=</span><span class="m">1</span> <span class="nv">GYP_DEFINES</span><span class="o">=</span><span class="s2">&quot;target_arch=arm&quot;</span> gclient runhooks
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">GYP_CROSSCOMPILE</span><span class="o">=</span><span class="m">1</span> <span class="nv">GYP_DEFINES</span><span class="o">=</span><span class="s2">&quot;target_arch=arm&quot;</span> gclient runhooks
 </pre></div>
 </div>
 <p>The build command is the same as in Ubuntu:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ ninja -C out/Release
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ninja -C out/Release
 </pre></div>
 </div>
 </section>
@@ -253,40 +249,32 @@ and library dependencies directly from Ubuntu:</p>
 <section id="alpine-linux">
 <h3>Alpine Linux<a class="headerlink" href="#alpine-linux" title="Permalink to this headline">¶</a></h3>
 <p>Use <code class="docutils literal notranslate"><span class="pre">apk</span></code> command to install dependencies:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ apk add --no-cache bash build-base curl findutils git ninja python <span class="se">\</span>
-                     bsd-compat-headers linux-headers libexecinfo-dev
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>apk add --no-cache <span class="se">\</span>
+        bash curl <span class="se">\</span>
+        bsd-compat-headers c-ares-dev linux-headers <span class="se">\</span>
+        build-base git ninja python2 python3
 </pre></div>
 </div>
 <p>Alpine uses musl which does not have mallinfo defined in malloc.h. It is
 required by one of Shaka Packager’s dependency. To workaround the problem, a
 dummy structure has to be defined in /usr/include/malloc.h, e.g.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sed -i <span class="se">\</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sed -i <span class="se">\</span>
   <span class="s1">&#39;/malloc_usable_size/a \\nstruct mallinfo {\n  int arena;\n  int hblkhd;\n  int uordblks;\n};&#39;</span> <span class="se">\</span>
   /usr/include/malloc.h
 </pre></div>
 </div>
-<p>We also need to disable clang and some other features to make it work with musl:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">GYP_DEFINES</span><span class="o">=</span><span class="s1">&#39;clang=0 use_experimental_allocator_shim=0 use_allocator=none musl=1&#39;</span>
+<p>We also need to enable musl in the build config:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">GYP_DEFINES</span><span class="o">=</span><span class="s1">&#39;musl=1&#39;</span>
 </pre></div>
 </div>
 </section>
 <section id="arch-linux">
 <h3>Arch Linux<a class="headerlink" href="#arch-linux" title="Permalink to this headline">¶</a></h3>
 <p>Instead of running <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span></code> to install build dependencies, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sudo pacman -Sy --needed python2 git curl gcc gcc-libs make
-$ sudo ln -sf python2 /usr/bin/python
-</pre></div>
-</div>
-<p>Clang requires libtinfo.so.5 which is not available by default on Arch Linux.
-You can get libtinfo from ncurses5-compat-libs in AUR:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ git clone https://aur.archlinux.org/ncurses5-compat-libs.git
-$ <span class="nb">cd</span> ncurses5-compat-libs
-$ gpg --keyserver pgp.mit.edu --recv-keys F7E48EDB
-$ makepkg -si
-</pre></div>
-</div>
-<p>Optionally, disable clang to build with gcc:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">export</span> <span class="nv">GYP_DEFINES</span><span class="o">=</span><span class="s1">&#39;clang=0&#39;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo pacman -Sy --needed <span class="se">\</span>
+        core/which <span class="se">\</span>
+        c-ares <span class="se">\</span>
+        gcc git python2 python3
 </pre></div>
 </div>
 </section>
@@ -297,15 +285,24 @@ $ makepkg -si
 <section id="fedora">
 <h3>Fedora<a class="headerlink" href="#fedora" title="Permalink to this headline">¶</a></h3>
 <p>Instead of running <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span></code> to install build dependencies, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ su -c <span class="s1">&#39;yum install -y git python git curl gcc-c++ findutils bzip2 \</span>
-<span class="s1">         ncurses-compat-libs&#39;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>su -c <span class="s1">&#39;yum install -y \</span>
+<span class="s1">        which \</span>
+<span class="s1">        c-ares-devel libatomic \</span>
+<span class="s1">        gcc-c++ git python2&#39;</span>
 </pre></div>
 </div>
+</section>
+<section id="centos">
+<h3>CentOS<a class="headerlink" href="#centos" title="Permalink to this headline">¶</a></h3>
+<p>Same as Fedora.</p>
 </section>
 <section id="opensuse">
 <h3>OpenSUSE<a class="headerlink" href="#opensuse" title="Permalink to this headline">¶</a></h3>
 <p>Use <code class="docutils literal notranslate"><span class="pre">zypper</span></code> command to install dependencies:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo zypper <span class="k">in</span> git python python-xml git curl gcc-c++ tar libncurses5
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo zypper <span class="k">in</span> -y <span class="se">\</span>
+        curl which <span class="se">\</span>
+        c-ares-devel <span class="se">\</span>
+        gcc-c++ git python python3
 </pre></div>
 </div>
 </section>
@@ -321,11 +318,11 @@ root via sudo.</p>
 </div></blockquote>
 <p>the Xcode license has not been accepted yet which (contrary to the message) any
 user can do by running:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ xcodebuild -license
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>xcodebuild -license
 </pre></div>
 </div>
 <p>Only accepting for all users of the machine requires root:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sudo xcodebuild -license
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo xcodebuild -license
 </pre></div>
 </div>
 </section>
@@ -337,7 +334,7 @@ user can do by running:</p>
 </div></blockquote>
 <p>curl CA bundle is not able to be located. Installing curl with openssl should
 resolve the issue:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ brew install curl --with-openssl
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>brew install curl --with-openssl
 </pre></div>
 </div>
 </section>
@@ -347,15 +344,15 @@ resolve the issue:</p>
 <p>You might find Gyp generators helpful. Output is not guaranteed to work.
 Manual editing might be necessary.</p>
 <p>To generate CMakeLists.txt in out/Release and out/Debug use:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ <span class="nv">GYP_GENERATORS</span><span class="o">=</span>cmake gclient runhooks
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">GYP_GENERATORS</span><span class="o">=</span>cmake gclient runhooks
 </pre></div>
 </div>
 <p>To generate IDE project files in out/Release and out/Debug use:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ <span class="nv">GYP_GENERATORS</span><span class="o">=</span>eclipse gclient runhooks
-$ <span class="nv">GYP_GENERATORS</span><span class="o">=</span>xcode gclient runhooks
-$ <span class="nv">GYP_GENERATORS</span><span class="o">=</span>xcode_test gclient runhooks
-$ <span class="nv">GYP_GENERATORS</span><span class="o">=</span>msvs gclient runhooks
-$ <span class="nv">GYP_GENERATORS</span><span class="o">=</span>msvs_test gclient runhooks
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">GYP_GENERATORS</span><span class="o">=</span>eclipse gclient runhooks
+<span class="nv">GYP_GENERATORS</span><span class="o">=</span>xcode gclient runhooks
+<span class="nv">GYP_GENERATORS</span><span class="o">=</span>xcode_test gclient runhooks
+<span class="nv">GYP_GENERATORS</span><span class="o">=</span>msvs gclient runhooks
+<span class="nv">GYP_GENERATORS</span><span class="o">=</span>msvs_test gclient runhooks
 </pre></div>
 </div>
 </section>
@@ -369,7 +366,7 @@ details.</p>
 locally by running the tests manually.</p>
 <p>If you know which tests are affected by your change, you can limit which tests
 are run using the <code class="docutils literal notranslate"><span class="pre">--gtest_filter</span></code> arg, e.g.:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ out/Debug/mp4_unittest --gtest_filter<span class="o">=</span><span class="s2">&quot;MP4MediaParserTest.*&quot;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>out/Debug/mp4_unittest --gtest_filter<span class="o">=</span><span class="s2">&quot;MP4MediaParserTest.*&quot;</span>
 </pre></div>
 </div>
 <p>You can find out more about GoogleTest at its
@@ -384,8 +381,9 @@ are run using the <code class="docutils literal notranslate"><span class="pre">-
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Build Instructions</a><ul>
 <li><a class="reference internal" href="#linux-build-dependencies">Linux build dependencies</a></li>
 <li><a class="reference internal" href="#mac-system-requirements">Mac system requirements</a></li>
@@ -411,6 +409,7 @@ are run using the <code class="docutils literal notranslate"><span class="pre">-
 <li><a class="reference internal" href="#arch-linux">Arch Linux</a></li>
 <li><a class="reference internal" href="#debian">Debian</a></li>
 <li><a class="reference internal" href="#fedora">Fedora</a></li>
+<li><a class="reference internal" href="#centos">CentOS</a></li>
 <li><a class="reference internal" href="#opensuse">OpenSUSE</a></li>
 </ul>
 </li>
@@ -425,12 +424,17 @@ are run using the <code class="docutils literal notranslate"><span class="pre">-
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="library.html"
-                        title="previous chapter">Shaka Packager Library</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="docker_instructions.html"
-                        title="next chapter">Using Docker</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="library.html"
+                          title="previous chapter">Shaka Packager Library</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="docker_instructions.html"
+                          title="next chapter">Using Docker</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -442,7 +446,7 @@ are run using the <code class="docutils literal notranslate"><span class="pre">-
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -470,7 +474,7 @@ are run using the <code class="docutils literal notranslate"><span class="pre">-
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Google.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
     </div>
   </body>
 </html>

@@ -99,7 +99,7 @@ $(function() {
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordtype">void</span> Initialize(<span class="keyword">const</span> std::map&lt;std::string, TextRegion&gt;&amp; regions,</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                  <span class="keyword">const</span> std::string&amp; language,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                  uint32_t time_scale);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                  int32_t time_scale);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">void</span> AddSample(<span class="keyword">const</span> <a class="code" href="../../db/d1f/classshaka_1_1media_1_1TextSample.html">TextSample</a>&amp; sample);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">void</span> Reset();</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
@@ -118,7 +118,7 @@ $(function() {
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  std::list&lt;TextSample&gt; samples_;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  std::map&lt;std::string, TextRegion&gt; regions_;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  std::string language_;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  uint32_t time_scale_;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  int32_t time_scale_;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="comment">// This is modified in &quot;const&quot; methods to create unique IDs.</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">mutable</span> uint32_t region_id_ = 0;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
@@ -136,7 +136,7 @@ $(function() {
 <div class="ttc" id="aclassshaka_1_1media_1_1ttml_1_1TtmlGenerator_html"><div class="ttname"><a href="../../df/d87/classshaka_1_1media_1_1ttml_1_1TtmlGenerator.html">shaka::media::ttml::TtmlGenerator</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd0/ttml__generator_8h_source.html#l00022">ttml_generator.h:22</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:04 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:14 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

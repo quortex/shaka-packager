@@ -81,8 +81,9 @@ Inheritance diagram for shaka::media::mp4::Segmenter:</div>
  <div class="center">
   <img src="../../d9/d26/classshaka_1_1media_1_1mp4_1_1Segmenter.png" usemap="#shaka::media::mp4::Segmenter_map" alt=""/>
   <map id="shaka::media::mp4::Segmenter_map" name="shaka::media::mp4::Segmenter_map">
-<area href="../../d8/db7/classshaka_1_1media_1_1mp4_1_1MultiSegmentSegmenter.html" alt="shaka::media::mp4::MultiSegmentSegmenter" shape="rect" coords="0,56,262,80"/>
-<area href="../../d0/dab/classshaka_1_1media_1_1mp4_1_1SingleSegmentSegmenter.html" alt="shaka::media::mp4::SingleSegmentSegmenter" shape="rect" coords="272,56,534,80"/>
+<area href="../../d3/da2/classshaka_1_1media_1_1mp4_1_1LowLatencySegmentSegmenter.html" alt="shaka::media::mp4::LowLatencySegmentSegmenter" shape="rect" coords="0,56,295,80"/>
+<area href="../../d8/db7/classshaka_1_1media_1_1mp4_1_1MultiSegmentSegmenter.html" alt="shaka::media::mp4::MultiSegmentSegmenter" shape="rect" coords="305,56,600,80"/>
+<area href="../../d0/dab/classshaka_1_1media_1_1mp4_1_1SingleSegmentSegmenter.html" alt="shaka::media::mp4::SingleSegmentSegmenter" shape="rect" coords="610,56,905,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -106,13 +107,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a59aae556eb59d0f1aad26e635ceeb767"><td class="memItemLeft" align="right" valign="top"><a id="a59aae556eb59d0f1aad26e635ceeb767"></a>
 virtual std::vector&lt; <a class="el" href="../../d9/de0/structshaka_1_1media_1_1Range.html">Range</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetSegmentRanges</b> ()=0</td></tr>
 <tr class="separator:a59aae556eb59d0f1aad26e635ceeb767"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae70013a027da91e3ad180d2444eeec8c"><td class="memItemLeft" align="right" valign="top"><a id="ae70013a027da91e3ad180d2444eeec8c"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetReferenceTimeScale</b> () const</td></tr>
-<tr class="separator:ae70013a027da91e3ad180d2444eeec8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5e1a08d6b55ca32d67b8f0c92a8fd14"><td class="memItemLeft" align="right" valign="top"><a id="ae5e1a08d6b55ca32d67b8f0c92a8fd14"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetReferenceTimeScale</b> () const</td></tr>
+<tr class="separator:ae5e1a08d6b55ca32d67b8f0c92a8fd14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a8e69eff130e3ce8817541958a8e4fe"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d26/classshaka_1_1media_1_1mp4_1_1Segmenter.html#a4a8e69eff130e3ce8817541958a8e4fe">GetDuration</a> () const</td></tr>
 <tr class="separator:a4a8e69eff130e3ce8817541958a8e4fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8dbd1f6993274a599c72a18b363d195"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d26/classshaka_1_1media_1_1mp4_1_1Segmenter.html#ad8dbd1f6993274a599c72a18b363d195">sample_duration</a> () const</td></tr>
-<tr class="separator:ad8dbd1f6993274a599c72a18b363d195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d26d7d6d85854975f2865bfdc5ab953"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d26/classshaka_1_1media_1_1mp4_1_1Segmenter.html#a0d26d7d6d85854975f2865bfdc5ab953">sample_duration</a> () const</td></tr>
+<tr class="separator:a0d26d7d6d85854975f2865bfdc5ab953"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -191,7 +192,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_progress_target</
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>OK on success, an error status otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/da8/mp4_2segmenter_8cc_source.html#l00123">123</a> of file <a class="el" href="../../d2/da8/mp4_2segmenter_8cc_source.html">segmenter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/da8/mp4_2segmenter_8cc_source.html#l00124">124</a> of file <a class="el" href="../../d2/da8/mp4_2segmenter_8cc_source.html">segmenter.cc</a>.</p>
 
 </div>
 </div>
@@ -249,7 +250,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_progress_target</
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>OK on success, an error status otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/da8/mp4_2segmenter_8cc_source.html#l00147">147</a> of file <a class="el" href="../../d2/da8/mp4_2segmenter_8cc_source.html">segmenter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/da8/mp4_2segmenter_8cc_source.html#l00148">148</a> of file <a class="el" href="../../d2/da8/mp4_2segmenter_8cc_source.html">segmenter.cc</a>.</p>
 
 </div>
 </div>
@@ -269,7 +270,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_progress_target</
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The total length, in seconds, of segmented media files. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/da8/mp4_2segmenter_8cc_source.html#l00241">241</a> of file <a class="el" href="../../d2/da8/mp4_2segmenter_8cc_source.html">segmenter.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/da8/mp4_2segmenter_8cc_source.html#l00251">251</a> of file <a class="el" href="../../d2/da8/mp4_2segmenter_8cc_source.html">segmenter.cc</a>.</p>
 
 </div>
 </div>
@@ -308,7 +309,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_progress_target</
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>true if there is an index byte range, while setting <em>offset</em> and <em>size</em>; or false if index byte range does not apply. </dd></dl>
 
-<p>Implemented in <a class="el" href="../../d0/dab/classshaka_1_1media_1_1mp4_1_1SingleSegmentSegmenter.html#a5877fd31ed73a048529385b36437364a">shaka::media::mp4::SingleSegmentSegmenter</a>, and <a class="el" href="../../d8/db7/classshaka_1_1media_1_1mp4_1_1MultiSegmentSegmenter.html#acd917150490f8e5721fad28904422eca">shaka::media::mp4::MultiSegmentSegmenter</a>.</p>
+<p>Implemented in <a class="el" href="../../d3/da2/classshaka_1_1media_1_1mp4_1_1LowLatencySegmentSegmenter.html#a90d41c41bc909ddc4f8a9a675d6b55f8">shaka::media::mp4::LowLatencySegmentSegmenter</a>, <a class="el" href="../../d0/dab/classshaka_1_1media_1_1mp4_1_1SingleSegmentSegmenter.html#a5877fd31ed73a048529385b36437364a">shaka::media::mp4::SingleSegmentSegmenter</a>, and <a class="el" href="../../d8/db7/classshaka_1_1media_1_1mp4_1_1MultiSegmentSegmenter.html#acd917150490f8e5721fad28904422eca">shaka::media::mp4::MultiSegmentSegmenter</a>.</p>
 
 </div>
 </div>
@@ -347,7 +348,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_progress_target</
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>true if there is an initialization range, while setting <em>offset</em> and <em>size</em>; or false if initialization range does not apply. </dd></dl>
 
-<p>Implemented in <a class="el" href="../../d0/dab/classshaka_1_1media_1_1mp4_1_1SingleSegmentSegmenter.html#a61e71cfc720342ecb16b830e6fca0fe4">shaka::media::mp4::SingleSegmentSegmenter</a>, and <a class="el" href="../../d8/db7/classshaka_1_1media_1_1mp4_1_1MultiSegmentSegmenter.html#a15f78aada048b15472d485b80875e838">shaka::media::mp4::MultiSegmentSegmenter</a>.</p>
+<p>Implemented in <a class="el" href="../../d3/da2/classshaka_1_1media_1_1mp4_1_1LowLatencySegmentSegmenter.html#a7f5579d66182e4e77014a66f473b39c6">shaka::media::mp4::LowLatencySegmentSegmenter</a>, <a class="el" href="../../d0/dab/classshaka_1_1media_1_1mp4_1_1SingleSegmentSegmenter.html#a61e71cfc720342ecb16b830e6fca0fe4">shaka::media::mp4::SingleSegmentSegmenter</a>, and <a class="el" href="../../d8/db7/classshaka_1_1media_1_1mp4_1_1MultiSegmentSegmenter.html#a15f78aada048b15472d485b80875e838">shaka::media::mp4::MultiSegmentSegmenter</a>.</p>
 
 </div>
 </div>
@@ -396,8 +397,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_progress_target</
 
 </div>
 </div>
-<a id="ad8dbd1f6993274a599c72a18b363d195"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8dbd1f6993274a599c72a18b363d195">&#9670;&nbsp;</a></span>sample_duration()</h2>
+<a id="a0d26d7d6d85854975f2865bfdc5ab953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d26d7d6d85854975f2865bfdc5ab953">&#9670;&nbsp;</a></span>sample_duration()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -406,7 +407,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_progress_target</
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t shaka::media::mp4::Segmenter::sample_duration </td>
+          <td class="memname">int32_t shaka::media::mp4::Segmenter::sample_duration </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -431,7 +432,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_progress_target</
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:06 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:17 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -90,12 +90,31 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
 <tr class="separator:a1ab10c82260dc073fb3830efcdabb171"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcde8cc6cf9646c78f5bf13181022aa7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/structshaka_1_1ChunkingParams.html#afcde8cc6cf9646c78f5bf13181022aa7">subsegment_sap_aligned</a> = true</td></tr>
 <tr class="separator:afcde8cc6cf9646c78f5bf13181022aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46d9f6c8b7710a227354def3bc73e24f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1f/structshaka_1_1ChunkingParams.html#a46d9f6c8b7710a227354def3bc73e24f">low_latency_dash_mode</a> = false</td></tr>
+<tr class="separator:a46d9f6c8b7710a227354def3bc73e24f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Chunking (segmentation) related parameters. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/d79/chunking__params_8h_source.html#l00013">13</a> of file <a class="el" href="../../db/d79/chunking__params_8h_source.html">chunking_params.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a46d9f6c8b7710a227354def3bc73e24f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46d9f6c8b7710a227354def3bc73e24f">&#9670;&nbsp;</a></span>low_latency_dash_mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool shaka::ChunkingParams::low_latency_dash_mode = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enable LL-DASH streaming. Each segment constists of many fragments, and each fragment contains one chunk. A chunk is the smallest unit and is constructed of a single moof and mdat atom. Each chunk is uploaded immediately upon creation, decoupling latency from segment duration. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d79/chunking__params_8h_source.html#l00033">33</a> of file <a class="el" href="../../db/d79/chunking__params_8h_source.html">chunking_params.h</a>.</p>
+
+</div>
+</div>
 <a id="a1ab10c82260dc073fb3830efcdabb171"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1ab10c82260dc073fb3830efcdabb171">&#9670;&nbsp;</a></span>segment_sap_aligned</h2>
 
@@ -153,7 +172,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:05 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:15 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

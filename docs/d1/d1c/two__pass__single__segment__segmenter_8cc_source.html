@@ -237,8 +237,8 @@ $(function() {
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="comment">// Update the progress; need to convert from WebM timecode to ISO BMFF.</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">const</span> uint64_t webm_delta_time = next_cue-&gt;time() - cue-&gt;time();</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">const</span> uint64_t delta_time = FromWebMTimecode(webm_delta_time);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">const</span> int64_t webm_delta_time = next_cue-&gt;time() - cue-&gt;time();</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">const</span> int64_t delta_time = FromWebMTimecode(webm_delta_time);</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    UpdateProgress(delta_time);</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  }</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
@@ -261,11 +261,11 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespaceshaka_html"><div class="ttname"><a href="../../d8/daf/namespaceshaka.html">shaka</a></div><div class="ttdoc">All the methods that are virtual are virtual for mocking.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d15/gflags__hex__bytes_8cc_source.html#l00011">gflags_hex_bytes.cc:11</a></div></div>
 <div class="ttc" id="anamespaceshaka_html_a66e7e156c1f83435fb6c130803e48f62"><div class="ttname"><a href="../../d8/daf/namespaceshaka.html#a66e7e156c1f83435fb6c130803e48f62">shaka::TempFilePath</a></div><div class="ttdeci">bool TempFilePath(const std::string &amp;temp_dir, std::string *temp_file_path)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d2b/file__util_8cc_source.html#l00038">file_util.cc:38</a></div></div>
-<div class="ttc" id="aclassshaka_1_1File_html_a383c9f670511961f334569fd1a7a103b"><div class="ttname"><a href="../../d3/d73/classshaka_1_1File.html#a383c9f670511961f334569fd1a7a103b">shaka::File::Delete</a></div><div class="ttdeci">static bool Delete(const char *file_name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/file_8cc_source.html#l00212">file.cc:212</a></div></div>
+<div class="ttc" id="aclassshaka_1_1File_html_a383c9f670511961f334569fd1a7a103b"><div class="ttname"><a href="../../d3/d73/classshaka_1_1File.html#a383c9f670511961f334569fd1a7a103b">shaka::File::Delete</a></div><div class="ttdeci">static bool Delete(const char *file_name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/file_8cc_source.html#l00213">file.cc:213</a></div></div>
 <div class="ttc" id="aclassshaka_1_1File_html_a68a15f623c2a1601879f291f93a1f464"><div class="ttname"><a href="../../d3/d73/classshaka_1_1File.html#a68a15f623c2a1601879f291f93a1f464">shaka::File::Open</a></div><div class="ttdeci">virtual bool Open()=0</div><div class="ttdoc">Internal open. Should not be used directly.</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:04 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:14 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

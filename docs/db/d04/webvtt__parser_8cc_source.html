@@ -155,7 +155,7 @@ $(function() {
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">double</span> temp;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordflow">if</span> (!base::StringToDouble(str.substr(0, str.size() - 1), &amp;temp) ||</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      temp &gt;= 100) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      temp &gt; 100) {</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  }</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  *value = temp;</div>
@@ -466,8 +466,8 @@ $(function() {
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  <span class="keyword">const</span> std::vector&lt;std::string&gt; time_and_style = base::SplitString(</div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;      block[0], <span class="stringliteral">&quot; &quot;</span>, base::TRIM_WHITESPACE, base::SPLIT_WANT_NONEMPTY);</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  uint64_t start_time = 0;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  uint64_t end_time = 0;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  int64_t start_time = 0;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  int64_t end_time = 0;</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160; </div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">bool</span> parsed_time =</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;      time_and_style.size() &gt;= 3 &amp;&amp; time_and_style[1] == <span class="stringliteral">&quot;--&gt;&quot;</span> &amp;&amp;</div>
@@ -572,7 +572,7 @@ $(function() {
 <div class="ttc" id="aclassshaka_1_1media_1_1WebVttParser_html_a521d223f2fe3c80f66cdc3bda8c07e91"><div class="ttname"><a href="../../d9/d40/classshaka_1_1media_1_1WebVttParser.html#a521d223f2fe3c80f66cdc3bda8c07e91">shaka::media::WebVttParser::Flush</a></div><div class="ttdeci">bool Flush() override</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d04/webvtt__parser_8cc_source.html#l00206">webvtt_parser.cc:206</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:04 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:14 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

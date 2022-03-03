@@ -94,12 +94,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad6171481d6fb437767b1f5b9e0dac1a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae10c06fe6022a1020fc889de389be430"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#ae10c06fe6022a1020fc889de389be430">NotifyNewContainer</a> (const MediaInfo &amp;media_info, uint32_t *container_id)=0</td></tr>
 <tr class="separator:ae10c06fe6022a1020fc889de389be430"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a721edf600dc9165e96e4b6c154a2d4f6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#a721edf600dc9165e96e4b6c154a2d4f6">NotifySampleDuration</a> (uint32_t container_id, uint32_t sample_duration)=0</td></tr>
-<tr class="separator:a721edf600dc9165e96e4b6c154a2d4f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a100236a249477afcda4f50e4914f0eee"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#a100236a249477afcda4f50e4914f0eee">NotifyNewSegment</a> (uint32_t container_id, uint64_t start_time, uint64_t duration, uint64_t size)=0</td></tr>
-<tr class="separator:a100236a249477afcda4f50e4914f0eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74fed9807b9584387e5da5f0fd28d54d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#a74fed9807b9584387e5da5f0fd28d54d">NotifyCueEvent</a> (uint32_t container_id, uint64_t timestamp)=0</td></tr>
-<tr class="separator:a74fed9807b9584387e5da5f0fd28d54d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acafa6cf3bb5f5fcc6195759ef1458bda"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#acafa6cf3bb5f5fcc6195759ef1458bda">NotifyAvailabilityTimeOffset</a> (uint32_t container_id)</td></tr>
+<tr class="separator:acafa6cf3bb5f5fcc6195759ef1458bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34174454309777dea6531f6d7923f6d4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#a34174454309777dea6531f6d7923f6d4">NotifySampleDuration</a> (uint32_t container_id, int32_t sample_duration)=0</td></tr>
+<tr class="separator:a34174454309777dea6531f6d7923f6d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adce30b307fa9663556257f314c66043f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#adce30b307fa9663556257f314c66043f">NotifySegmentDuration</a> (uint32_t container_id)</td></tr>
+<tr class="separator:adce30b307fa9663556257f314c66043f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee3c5fef6f0436a538a3365a23388ea0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#aee3c5fef6f0436a538a3365a23388ea0">NotifyNewSegment</a> (uint32_t container_id, int64_t start_time, int64_t duration, uint64_t size)=0</td></tr>
+<tr class="separator:aee3c5fef6f0436a538a3365a23388ea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabefa8a0a697d3a8a82fa11dd7e771ec"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#aabefa8a0a697d3a8a82fa11dd7e771ec">NotifyCompletedSegment</a> (uint32_t container_id, int64_t duration, uint64_t size)</td></tr>
+<tr class="separator:aabefa8a0a697d3a8a82fa11dd7e771ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6831a12867a69d4a713408d9f437947"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#ad6831a12867a69d4a713408d9f437947">NotifyCueEvent</a> (uint32_t container_id, int64_t timestamp)=0</td></tr>
+<tr class="separator:ad6831a12867a69d4a713408d9f437947"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf6a0bde4fc907053cc9f1ff9a38b59a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#acf6a0bde4fc907053cc9f1ff9a38b59a">NotifyEncryptionUpdate</a> (uint32_t container_id, const std::string &amp;drm_uuid, const std::vector&lt; uint8_t &gt; &amp;new_key_id, const std::vector&lt; uint8_t &gt; &amp;new_pssh)=0</td></tr>
 <tr class="separator:acf6a0bde4fc907053cc9f1ff9a38b59a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d55e7b557c624954b4e05edf6bd83d1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#a4d55e7b557c624954b4e05edf6bd83d1">NotifyMediaInfoUpdate</a> (uint32_t container_id, const MediaInfo &amp;media_info)=0</td></tr>
@@ -144,7 +150,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The dash profile for this object. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html#l00111">111</a> of file <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html">mpd_notifier.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html#l00145">145</a> of file <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html">mpd_notifier.h</a>.</p>
 
 </div>
 </div>
@@ -200,7 +206,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>include_mspr_pro option flag </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html#l00108">108</a> of file <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html">mpd_notifier.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html#l00142">142</a> of file <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html">mpd_notifier.h</a>.</p>
 
 </div>
 </div>
@@ -256,12 +262,104 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The mpd type for this object. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html#l00114">114</a> of file <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html">mpd_notifier.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html#l00148">148</a> of file <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html">mpd_notifier.h</a>.</p>
 
 </div>
 </div>
-<a id="a74fed9807b9584387e5da5f0fd28d54d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74fed9807b9584387e5da5f0fd28d54d">&#9670;&nbsp;</a></span>NotifyCueEvent()</h2>
+<a id="acafa6cf3bb5f5fcc6195759ef1458bda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acafa6cf3bb5f5fcc6195759ef1458bda">&#9670;&nbsp;</a></span>NotifyAvailabilityTimeOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool shaka::MpdNotifier::NotifyAvailabilityTimeOffset </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>container_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Record the availailityTimeOffset for Low Latency DASH streaming. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">container_id</td><td>Container ID obtained from calling <a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#ae10c06fe6022a1020fc889de389be430">NotifyNewContainer()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true on success, false otherwise. This may fail if the container specified by <em>container_id</em> does not exist. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="../../d8/de1/classshaka_1_1SimpleMpdNotifier.html#afe85be4dcb3e47dfd410ea47ecd792bf">shaka::SimpleMpdNotifier</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html#l00054">54</a> of file <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html">mpd_notifier.h</a>.</p>
+
+</div>
+</div>
+<a id="aabefa8a0a697d3a8a82fa11dd7e771ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabefa8a0a697d3a8a82fa11dd7e771ec">&#9670;&nbsp;</a></span>NotifyCompletedSegment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool shaka::MpdNotifier::NotifyCompletedSegment </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>container_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>duration</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Notifies <a class="el" href="../../dc/da1/classshaka_1_1MpdBuilder.html" title="This class generates DASH MPDs (Media Presentation Descriptions).">MpdBuilder</a> that a segment is fully written and provides the segment's complete duration and size. For Low Latency only. Note, size and duration are not known when the low latency segment is first registered with the MPD, so we must update these values after the segment is complete. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">container_id</td><td>Container ID obtained from calling <a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#ae10c06fe6022a1020fc889de389be430">NotifyNewContainer()</a>. </td></tr>
+    <tr><td class="paramname">duration</td><td>is the duration of the complete segment, in units of the stream's time scale. </td></tr>
+    <tr><td class="paramname">size</td><td>is the complete segment size in bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true on success, false otherwise. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="../../d8/de1/classshaka_1_1SimpleMpdNotifier.html#a31934719bbdbc5287c4ebeb09286ff53">shaka::SimpleMpdNotifier</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html#l00102">102</a> of file <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html">mpd_notifier.h</a>.</p>
+
+</div>
+</div>
+<a id="ad6831a12867a69d4a713408d9f437947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6831a12867a69d4a713408d9f437947">&#9670;&nbsp;</a></span>NotifyCueEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,7 +376,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramtype">int64_t&#160;</td>
           <td class="paramname"><em>timestamp</em>&#160;</td>
         </tr>
         <tr>
@@ -302,7 +400,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true on success, false otherwise. </dd></dl>
 
-<p>Implemented in <a class="el" href="../../d8/de1/classshaka_1_1SimpleMpdNotifier.html#a165f1237a3c70abe524289837f3b135d">shaka::SimpleMpdNotifier</a>.</p>
+<p>Implemented in <a class="el" href="../../d8/de1/classshaka_1_1SimpleMpdNotifier.html#a646415425c63bf94a4896513caf36b14">shaka::SimpleMpdNotifier</a>.</p>
 
 </div>
 </div>
@@ -444,10 +542,10 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Notifies the <a class="el" href="../../dc/da1/classshaka_1_1MpdBuilder.html" title="This class generates DASH MPDs (Media Presentation Descriptions).">MpdBuilder</a> that there is a new container along with <em>media_info</em>. Live may have multiple files (segments) but those should be notified via <a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#a100236a249477afcda4f50e4914f0eee">NotifyNewSegment()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Notifies the <a class="el" href="../../dc/da1/classshaka_1_1MpdBuilder.html" title="This class generates DASH MPDs (Media Presentation Descriptions).">MpdBuilder</a> that there is a new container along with <em>media_info</em>. Live may have multiple files (segments) but those should be notified via <a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#aee3c5fef6f0436a538a3365a23388ea0">NotifyNewSegment()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir"></td><td class="paramname">media_info</td><td>is the MediaInfo that will be passed to <a class="el" href="../../dc/da1/classshaka_1_1MpdBuilder.html" title="This class generates DASH MPDs (Media Presentation Descriptions).">MpdBuilder</a>. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">container_id</td><td>is the numeric ID of the container, possibly for <a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#a100236a249477afcda4f50e4914f0eee">NotifyNewSegment()</a> and AddContentProtectionElement(). Only populated on success. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">container_id</td><td>is the numeric ID of the container, possibly for <a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#aee3c5fef6f0436a538a3365a23388ea0">NotifyNewSegment()</a> and AddContentProtectionElement(). Only populated on success. </td></tr>
   </table>
   </dd>
 </dl>
@@ -457,8 +555,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a100236a249477afcda4f50e4914f0eee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a100236a249477afcda4f50e4914f0eee">&#9670;&nbsp;</a></span>NotifyNewSegment()</h2>
+<a id="aee3c5fef6f0436a538a3365a23388ea0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee3c5fef6f0436a538a3365a23388ea0">&#9670;&nbsp;</a></span>NotifyNewSegment()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -475,13 +573,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramtype">int64_t&#160;</td>
           <td class="paramname"><em>start_time</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramtype">int64_t&#160;</td>
           <td class="paramname"><em>duration</em>, </td>
         </tr>
         <tr>
@@ -502,7 +600,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Notifies <a class="el" href="../../dc/da1/classshaka_1_1MpdBuilder.html" title="This class generates DASH MPDs (Media Presentation Descriptions).">MpdBuilder</a> that there is a new segment ready. For live, this is usually a new segment, for VOD this is usually a subsegment. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Notifies <a class="el" href="../../dc/da1/classshaka_1_1MpdBuilder.html" title="This class generates DASH MPDs (Media Presentation Descriptions).">MpdBuilder</a> that there is a new segment ready. For live, this is usually a new segment, for VOD this is usually a subsegment, for low latency this is the first chunk. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">container_id</td><td>Container ID obtained from calling <a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#ae10c06fe6022a1020fc889de389be430">NotifyNewContainer()</a>. </td></tr>
     <tr><td class="paramname">start_time</td><td>is the start time of the new segment, in units of the stream's time scale. </td></tr>
@@ -513,12 +611,12 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true on success, false otherwise. </dd></dl>
 
-<p>Implemented in <a class="el" href="../../d8/de1/classshaka_1_1SimpleMpdNotifier.html#a8e9cc7fbe2e13a2b65ce9314428e48b8">shaka::SimpleMpdNotifier</a>.</p>
+<p>Implemented in <a class="el" href="../../d8/de1/classshaka_1_1SimpleMpdNotifier.html#a9b3def10ca48103aec6891e41d0df94d">shaka::SimpleMpdNotifier</a>.</p>
 
 </div>
 </div>
-<a id="a721edf600dc9165e96e4b6c154a2d4f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a721edf600dc9165e96e4b6c154a2d4f6">&#9670;&nbsp;</a></span>NotifySampleDuration()</h2>
+<a id="a34174454309777dea6531f6d7923f6d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34174454309777dea6531f6d7923f6d4">&#9670;&nbsp;</a></span>NotifySampleDuration()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -535,7 +633,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype">int32_t&#160;</td>
           <td class="paramname"><em>sample_duration</em>&#160;</td>
         </tr>
         <tr>
@@ -559,7 +657,44 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true on success, false otherwise. This may fail if the container specified by <em>container_id</em> does not exist. </dd></dl>
 
-<p>Implemented in <a class="el" href="../../d8/de1/classshaka_1_1SimpleMpdNotifier.html#ad876de8c9909394b6fb47f387066fc83">shaka::SimpleMpdNotifier</a>.</p>
+<p>Implemented in <a class="el" href="../../d8/de1/classshaka_1_1SimpleMpdNotifier.html#a3a69783a0d098d19c87cb486aec70db1">shaka::SimpleMpdNotifier</a>.</p>
+
+</div>
+</div>
+<a id="adce30b307fa9663556257f314c66043f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adce30b307fa9663556257f314c66043f">&#9670;&nbsp;</a></span>NotifySegmentDuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool shaka::MpdNotifier::NotifySegmentDuration </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>container_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Record the duration of a segment for Low Latency DASH streaming. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">container_id</td><td>Container ID obtained from calling <a class="el" href="../../d3/dd0/classshaka_1_1MpdNotifier.html#ae10c06fe6022a1020fc889de389be430">NotifyNewContainer()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true on success, false otherwise. This may fail if the container specified by <em>container_id</em> does not exist. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="../../d8/de1/classshaka_1_1SimpleMpdNotifier.html#af25e7eac5259fe461d7bc1c18349f097">shaka::SimpleMpdNotifier</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html#l00073">73</a> of file <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html">mpd_notifier.h</a>.</p>
 
 </div>
 </div>
@@ -587,7 +722,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The value of dash_force_segment_list flag </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html#l00117">117</a> of file <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html">mpd_notifier.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html#l00151">151</a> of file <a class="el" href="../../d7/d15/mpd__notifier_8h_source.html">mpd_notifier.h</a>.</p>
 
 </div>
 </div>
@@ -597,7 +732,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:05 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:15 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

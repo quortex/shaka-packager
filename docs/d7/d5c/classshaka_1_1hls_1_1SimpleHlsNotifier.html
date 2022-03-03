@@ -109,14 +109,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 <tr class="separator:a40850c462766a0ce4e9c92014ed77a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44409a32566bb416e572946fc2f511c9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5c/classshaka_1_1hls_1_1SimpleHlsNotifier.html#a44409a32566bb416e572946fc2f511c9">NotifyNewStream</a> (const MediaInfo &amp;media_info, const std::string &amp;playlist_name, const std::string &amp;stream_name, const std::string &amp;group_id, uint32_t *stream_id) override</td></tr>
 <tr class="separator:a44409a32566bb416e572946fc2f511c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7af83ad4387d28f5aa391a8a558d104"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5c/classshaka_1_1hls_1_1SimpleHlsNotifier.html#aa7af83ad4387d28f5aa391a8a558d104">NotifySampleDuration</a> (uint32_t stream_id, uint32_t sample_duration) override</td></tr>
-<tr class="separator:aa7af83ad4387d28f5aa391a8a558d104"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afab88a610a6d2ac8b21dd86a456c2c06"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5c/classshaka_1_1hls_1_1SimpleHlsNotifier.html#afab88a610a6d2ac8b21dd86a456c2c06">NotifyNewSegment</a> (uint32_t stream_id, const std::string &amp;segment_name, uint64_t start_time, uint64_t duration, uint64_t start_byte_offset, uint64_t size) override</td></tr>
-<tr class="separator:afab88a610a6d2ac8b21dd86a456c2c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3eed6f6e65b079b3ece7d3c503b33fbf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5c/classshaka_1_1hls_1_1SimpleHlsNotifier.html#a3eed6f6e65b079b3ece7d3c503b33fbf">NotifyKeyFrame</a> (uint32_t stream_id, uint64_t timestamp, uint64_t start_byte_offset, uint64_t size) override</td></tr>
-<tr class="separator:a3eed6f6e65b079b3ece7d3c503b33fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e7faa024bed78aa7bc8e3a2a36b3ad7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5c/classshaka_1_1hls_1_1SimpleHlsNotifier.html#a1e7faa024bed78aa7bc8e3a2a36b3ad7">NotifyCueEvent</a> (uint32_t container_id, uint64_t timestamp) override</td></tr>
-<tr class="separator:a1e7faa024bed78aa7bc8e3a2a36b3ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc13b5ba23053eb1bece8f2ff5d47a8b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5c/classshaka_1_1hls_1_1SimpleHlsNotifier.html#adc13b5ba23053eb1bece8f2ff5d47a8b">NotifySampleDuration</a> (uint32_t stream_id, int32_t sample_duration) override</td></tr>
+<tr class="separator:adc13b5ba23053eb1bece8f2ff5d47a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21e5bbed5a90ed2f1fe2b54d5e234a0d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5c/classshaka_1_1hls_1_1SimpleHlsNotifier.html#a21e5bbed5a90ed2f1fe2b54d5e234a0d">NotifyNewSegment</a> (uint32_t stream_id, const std::string &amp;segment_name, int64_t start_time, int64_t duration, uint64_t start_byte_offset, uint64_t size) override</td></tr>
+<tr class="separator:a21e5bbed5a90ed2f1fe2b54d5e234a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86f65d791ca690cbda4356d6002cc6f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5c/classshaka_1_1hls_1_1SimpleHlsNotifier.html#a86f65d791ca690cbda4356d6002cc6f6">NotifyKeyFrame</a> (uint32_t stream_id, int64_t timestamp, uint64_t start_byte_offset, uint64_t size) override</td></tr>
+<tr class="separator:a86f65d791ca690cbda4356d6002cc6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4912e8e17ccc84356c64b563558a7e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5c/classshaka_1_1hls_1_1SimpleHlsNotifier.html#ac4912e8e17ccc84356c64b563558a7e7">NotifyCueEvent</a> (uint32_t container_id, int64_t timestamp) override</td></tr>
+<tr class="separator:ac4912e8e17ccc84356c64b563558a7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2df072e5fbfcbf172319222a180e73d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5c/classshaka_1_1hls_1_1SimpleHlsNotifier.html#ac2df072e5fbfcbf172319222a180e73d">NotifyEncryptionUpdate</a> (uint32_t stream_id, const std::vector&lt; uint8_t &gt; &amp;key_id, const std::vector&lt; uint8_t &gt; &amp;system_id, const std::vector&lt; uint8_t &gt; &amp;iv, const std::vector&lt; uint8_t &gt; &amp;protection_system_specific_data) override</td></tr>
 <tr class="separator:ac2df072e5fbfcbf172319222a180e73d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a153fe931c8e6fe3e585ebd925d75d229"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d5c/classshaka_1_1hls_1_1SimpleHlsNotifier.html#a153fe931c8e6fe3e585ebd925d75d229">Flush</a> () override</td></tr>
@@ -222,8 +222,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 
 </div>
 </div>
-<a id="a1e7faa024bed78aa7bc8e3a2a36b3ad7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e7faa024bed78aa7bc8e3a2a36b3ad7">&#9670;&nbsp;</a></span>NotifyCueEvent()</h2>
+<a id="ac4912e8e17ccc84356c64b563558a7e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4912e8e17ccc84356c64b563558a7e7">&#9670;&nbsp;</a></span>NotifyCueEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,7 +240,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramtype">int64_t&#160;</td>
           <td class="paramname"><em>timestamp</em>&#160;</td>
         </tr>
         <tr>
@@ -264,7 +264,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true on success, false otherwise. </dd></dl>
 
-<p>Implements <a class="el" href="../../d9/deb/classshaka_1_1hls_1_1HlsNotifier.html#a064753b88baf3e2db4cbb316b07fd236">shaka::hls::HlsNotifier</a>.</p>
+<p>Implements <a class="el" href="../../d9/deb/classshaka_1_1hls_1_1HlsNotifier.html#a020f2326779d73784fe51f17976fea06">shaka::hls::HlsNotifier</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dad/simple__hls__notifier_8cc_source.html#l00426">426</a> of file <a class="el" href="../../d7/dad/simple__hls__notifier_8cc_source.html">simple_hls_notifier.cc</a>.</p>
 
@@ -338,8 +338,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 
 </div>
 </div>
-<a id="a3eed6f6e65b079b3ece7d3c503b33fbf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3eed6f6e65b079b3ece7d3c503b33fbf">&#9670;&nbsp;</a></span>NotifyKeyFrame()</h2>
+<a id="a86f65d791ca690cbda4356d6002cc6f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86f65d791ca690cbda4356d6002cc6f6">&#9670;&nbsp;</a></span>NotifyKeyFrame()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -356,7 +356,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramtype">int64_t&#160;</td>
           <td class="paramname"><em>timestamp</em>, </td>
         </tr>
         <tr>
@@ -393,14 +393,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="../../d9/deb/classshaka_1_1hls_1_1HlsNotifier.html#ad97b17a04765577090ef9b6124928af2">shaka::hls::HlsNotifier</a>.</p>
+<p>Implements <a class="el" href="../../d9/deb/classshaka_1_1hls_1_1HlsNotifier.html#a3e05cba214a6826cabf5022c668622c0">shaka::hls::HlsNotifier</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dad/simple__hls__notifier_8cc_source.html#l00411">411</a> of file <a class="el" href="../../d7/dad/simple__hls__notifier_8cc_source.html">simple_hls_notifier.cc</a>.</p>
 
 </div>
 </div>
-<a id="afab88a610a6d2ac8b21dd86a456c2c06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afab88a610a6d2ac8b21dd86a456c2c06">&#9670;&nbsp;</a></span>NotifyNewSegment()</h2>
+<a id="a21e5bbed5a90ed2f1fe2b54d5e234a0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21e5bbed5a90ed2f1fe2b54d5e234a0d">&#9670;&nbsp;</a></span>NotifyNewSegment()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -423,13 +423,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramtype">int64_t&#160;</td>
           <td class="paramname"><em>start_time</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramtype">int64_t&#160;</td>
           <td class="paramname"><em>duration</em>, </td>
         </tr>
         <tr>
@@ -468,7 +468,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="../../d9/deb/classshaka_1_1hls_1_1HlsNotifier.html#af5a0d6670313d81eff20bb959732a2cd">shaka::hls::HlsNotifier</a>.</p>
+<p>Implements <a class="el" href="../../d9/deb/classshaka_1_1hls_1_1HlsNotifier.html#a2b6a4718f877906a7810b6e69b849f6c">shaka::hls::HlsNotifier</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dad/simple__hls__notifier_8cc_source.html#l00360">360</a> of file <a class="el" href="../../d7/dad/simple__hls__notifier_8cc_source.html">simple_hls_notifier.cc</a>.</p>
 
@@ -543,8 +543,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 
 </div>
 </div>
-<a id="aa7af83ad4387d28f5aa391a8a558d104"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7af83ad4387d28f5aa391a8a558d104">&#9670;&nbsp;</a></span>NotifySampleDuration()</h2>
+<a id="adc13b5ba23053eb1bece8f2ff5d47a8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc13b5ba23053eb1bece8f2ff5d47a8b">&#9670;&nbsp;</a></span>NotifySampleDuration()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -561,7 +561,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype">int32_t&#160;</td>
           <td class="paramname"><em>sample_duration</em>&#160;</td>
         </tr>
         <tr>
@@ -585,7 +585,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true on success, false otherwise. This may fail if the stream specified by <em>stream_id</em> does not exist. </dd></dl>
 
-<p>Implements <a class="el" href="../../d9/deb/classshaka_1_1hls_1_1HlsNotifier.html#a63a11df343b1f75a5d89327a23d5249c">shaka::hls::HlsNotifier</a>.</p>
+<p>Implements <a class="el" href="../../d9/deb/classshaka_1_1hls_1_1HlsNotifier.html#a38b450fe7f8a9a2afa5b9e3224feb9ed">shaka::hls::HlsNotifier</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dad/simple__hls__notifier_8cc_source.html#l00347">347</a> of file <a class="el" href="../../d7/dad/simple__hls__notifier_8cc_source.html">simple_hls_notifier.cc</a>.</p>
 
@@ -598,7 +598,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:05 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:15 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

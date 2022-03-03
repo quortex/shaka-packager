@@ -91,9 +91,9 @@ Inheritance diagram for shaka::media::StreamInfo:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4dd520edf7452a27afccd578a53c246f"><td class="memItemLeft" align="right" valign="top"><a id="a4dd520edf7452a27afccd578a53c246f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>StreamInfo</b> (StreamType stream_type, int track_id, uint32_t time_scale, uint64_t duration, Codec codec, const std::string &amp;codec_string, const uint8_t *codec_config, size_t codec_config_size, const std::string &amp;language, bool is_encrypted)</td></tr>
-<tr class="separator:a4dd520edf7452a27afccd578a53c246f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4daeda0b9cef036753737465a8b977c"><td class="memItemLeft" align="right" valign="top"><a id="ab4daeda0b9cef036753737465a8b977c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>StreamInfo</b> (StreamType stream_type, int track_id, int32_t time_scale, int64_t duration, Codec codec, const std::string &amp;codec_string, const uint8_t *codec_config, size_t codec_config_size, const std::string &amp;language, bool is_encrypted)</td></tr>
+<tr class="separator:ab4daeda0b9cef036753737465a8b977c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e5c5ade77b7bcf0b7822de568695dc8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db1/classshaka_1_1media_1_1StreamInfo.html#a6e5c5ade77b7bcf0b7822de568695dc8">IsValidConfig</a> () const =0</td></tr>
 <tr class="separator:a6e5c5ade77b7bcf0b7822de568695dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3628e7fdcfccd0dc530df4b0f6e83b8"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db1/classshaka_1_1media_1_1StreamInfo.html#ab3628e7fdcfccd0dc530df4b0f6e83b8">ToString</a> () const</td></tr>
@@ -106,12 +106,12 @@ StreamType&#160;</td><td class="memItemRight" valign="bottom"><b>stream_type</b>
 <tr class="memitem:a7816dc6944476f469b9fc754b942d9c1"><td class="memItemLeft" align="right" valign="top"><a id="a7816dc6944476f469b9fc754b942d9c1"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>track_id</b> () const</td></tr>
 <tr class="separator:a7816dc6944476f469b9fc754b942d9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae85f78a0c703e022d11c00b7b72d6a07"><td class="memItemLeft" align="right" valign="top"><a id="ae85f78a0c703e022d11c00b7b72d6a07"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>time_scale</b> () const</td></tr>
-<tr class="separator:ae85f78a0c703e022d11c00b7b72d6a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad104a3ded73699b2603186e82d0f6a58"><td class="memItemLeft" align="right" valign="top"><a id="ad104a3ded73699b2603186e82d0f6a58"></a>
-uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>duration</b> () const</td></tr>
-<tr class="separator:ad104a3ded73699b2603186e82d0f6a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69d8a35f022208955e83d18b380bf7ee"><td class="memItemLeft" align="right" valign="top"><a id="a69d8a35f022208955e83d18b380bf7ee"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>time_scale</b> () const</td></tr>
+<tr class="separator:a69d8a35f022208955e83d18b380bf7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33d593cacb1ec8b2d86faaa17338ffef"><td class="memItemLeft" align="right" valign="top"><a id="a33d593cacb1ec8b2d86faaa17338ffef"></a>
+int64_t&#160;</td><td class="memItemRight" valign="bottom"><b>duration</b> () const</td></tr>
+<tr class="separator:a33d593cacb1ec8b2d86faaa17338ffef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e59776f40d93a3fbf5d68a090243a9f"><td class="memItemLeft" align="right" valign="top"><a id="a0e59776f40d93a3fbf5d68a090243a9f"></a>
 Codec&#160;</td><td class="memItemRight" valign="bottom"><b>codec</b> () const</td></tr>
 <tr class="separator:a0e59776f40d93a3fbf5d68a090243a9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,9 +133,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_clear_lead</b> ()
 <tr class="memitem:afc3e97f59b7f8006f1513a8c56c51395"><td class="memItemLeft" align="right" valign="top"><a id="afc3e97f59b7f8006f1513a8c56c51395"></a>
 const <a class="el" href="../../d7/d34/structshaka_1_1media_1_1EncryptionConfig.html">EncryptionConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>encryption_config</b> () const</td></tr>
 <tr class="separator:afc3e97f59b7f8006f1513a8c56c51395"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7848cffb0b01bb4ff8f998a5eb732f4"><td class="memItemLeft" align="right" valign="top"><a id="ad7848cffb0b01bb4ff8f998a5eb732f4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_duration</b> (uint64_t duration)</td></tr>
-<tr class="separator:ad7848cffb0b01bb4ff8f998a5eb732f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9ea1bc384a151194b08373f0c84f48c"><td class="memItemLeft" align="right" valign="top"><a id="ac9ea1bc384a151194b08373f0c84f48c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_duration</b> (int64_t duration)</td></tr>
+<tr class="separator:ac9ea1bc384a151194b08373f0c84f48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0744a0e813c8ad8c5df649a130794fb6"><td class="memItemLeft" align="right" valign="top"><a id="a0744a0e813c8ad8c5df649a130794fb6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_codec</b> (Codec codec)</td></tr>
 <tr class="separator:a0744a0e813c8ad8c5df649a130794fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,7 +161,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_encryption_config
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract class holds stream information. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/daa/stream__info_8h_source.html#l00065">65</a> of file <a class="el" href="../../d8/daa/stream__info_8h_source.html">stream_info.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/daa/stream__info_8h_source.html#l00067">67</a> of file <a class="el" href="../../d8/daa/stream__info_8h_source.html">stream_info.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="afdd9b2df8ae1c11bb033c44eaba5e38d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afdd9b2df8ae1c11bb033c44eaba5e38d">&#9670;&nbsp;</a></span>Clone()</h2>
@@ -256,7 +256,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_encryption_config
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:05 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:16 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -102,8 +102,8 @@ virtual <a class="el" href="../../d2/d20/classshaka_1_1Status.html">Status</a>&#
 <tr class="separator:a0d2e038e477a5a2bc903292977fc65bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41c393f477ff4b723aa448b35e9ee896"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d20/classshaka_1_1Status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da6/classshaka_1_1media_1_1PlayReadyKeySource.html#a41c393f477ff4b723aa448b35e9ee896">GetKey</a> (const std::vector&lt; uint8_t &gt; &amp;key_id, <a class="el" href="../../dd/dbd/structshaka_1_1media_1_1EncryptionKey.html">EncryptionKey</a> *key) override</td></tr>
 <tr class="separator:a41c393f477ff4b723aa448b35e9ee896"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad155a38ccb7bd7cfa991580eb0e1bbd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d20/classshaka_1_1Status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da6/classshaka_1_1media_1_1PlayReadyKeySource.html#ad155a38ccb7bd7cfa991580eb0e1bbd3">GetCryptoPeriodKey</a> (uint32_t crypto_period_index, uint32_t crypto_period_duration_in_seconds, const std::string &amp;stream_label, <a class="el" href="../../dd/dbd/structshaka_1_1media_1_1EncryptionKey.html">EncryptionKey</a> *key) override</td></tr>
-<tr class="separator:ad155a38ccb7bd7cfa991580eb0e1bbd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9fc86d472415755870322bf9ae174c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d20/classshaka_1_1Status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da6/classshaka_1_1media_1_1PlayReadyKeySource.html#af9fc86d472415755870322bf9ae174c6">GetCryptoPeriodKey</a> (uint32_t crypto_period_index, int32_t crypto_period_duration_in_seconds, const std::string &amp;stream_label, <a class="el" href="../../dd/dbd/structshaka_1_1media_1_1EncryptionKey.html">EncryptionKey</a> *key) override</td></tr>
+<tr class="separator:af9fc86d472415755870322bf9ae174c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -238,8 +238,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad155a38ccb7bd7cfa991580eb0e1bbd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad155a38ccb7bd7cfa991580eb0e1bbd3">&#9670;&nbsp;</a></span>GetCryptoPeriodKey()</h2>
+<a id="af9fc86d472415755870322bf9ae174c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9fc86d472415755870322bf9ae174c6">&#9670;&nbsp;</a></span>GetCryptoPeriodKey()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -256,7 +256,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype">int32_t&#160;</td>
           <td class="paramname"><em>crypto_period_duration_in_seconds</em>, </td>
         </tr>
         <tr>
@@ -294,7 +294,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>OK on success, an error status otherwise. </dd></dl>
 
-<p>Implements <a class="el" href="../../d1/d1f/classshaka_1_1media_1_1KeySource.html#aef67793f02b0cd34b57993fab9f789ae">shaka::media::KeySource</a>.</p>
+<p>Implements <a class="el" href="../../d1/d1f/classshaka_1_1media_1_1KeySource.html#a2aedb3c53e580f58ad3c2035f77e4b3a">shaka::media::KeySource</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/dd0/playready__key__source_8cc_source.html#l00197">197</a> of file <a class="el" href="../../da/dd0/playready__key__source_8cc_source.html">playready_key_source.cc</a>.</p>
 
@@ -403,7 +403,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:05 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:15 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

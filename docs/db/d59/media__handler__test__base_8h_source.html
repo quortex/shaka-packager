@@ -363,23 +363,23 @@ $(function() {
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  <span class="keywordtype">bool</span> IsVideoCodec(Codec codec) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  std::unique_ptr&lt;StreamInfo&gt; GetVideoStreamInfo(uint32_t time_scale) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  std::unique_ptr&lt;StreamInfo&gt; GetVideoStreamInfo(int32_t time_scale) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  std::unique_ptr&lt;StreamInfo&gt; GetVideoStreamInfo(uint32_t time_scale,</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  std::unique_ptr&lt;StreamInfo&gt; GetVideoStreamInfo(int32_t time_scale,</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                                                 uint32_t width,</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                                                 uint64_t height) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  std::unique_ptr&lt;StreamInfo&gt; GetVideoStreamInfo(uint32_t time_scale,</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  std::unique_ptr&lt;StreamInfo&gt; GetVideoStreamInfo(int32_t time_scale,</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                                                 Codec codec) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  std::unique_ptr&lt;StreamInfo&gt; GetVideoStreamInfo(uint32_t time_scale,</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  std::unique_ptr&lt;StreamInfo&gt; GetVideoStreamInfo(int32_t time_scale,</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                                                 Codec codec,</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                                                 uint32_t width,</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                                                 uint64_t height) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  std::unique_ptr&lt;StreamInfo&gt; GetAudioStreamInfo(uint32_t time_scale) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  std::unique_ptr&lt;StreamInfo&gt; GetAudioStreamInfo(int32_t time_scale) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  std::unique_ptr&lt;StreamInfo&gt; GetAudioStreamInfo(uint32_t time_scale,</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  std::unique_ptr&lt;StreamInfo&gt; GetAudioStreamInfo(int32_t time_scale,</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                                                 Codec codec) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  std::shared_ptr&lt;MediaSample&gt; GetMediaSample(int64_t timestamp,</div>
@@ -396,7 +396,7 @@ $(function() {
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                                              int64_t duration,</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                                              <span class="keywordtype">bool</span> is_subsegment) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  std::unique_ptr&lt;StreamInfo&gt; GetTextStreamInfo(uint32_t timescale) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  std::unique_ptr&lt;StreamInfo&gt; GetTextStreamInfo(int32_t timescale) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  std::unique_ptr&lt;TextSample&gt; GetTextSample(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>,</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                                            int64_t start,</div>
@@ -472,16 +472,16 @@ $(function() {
 <div class="ttc" id="aclassshaka_1_1media_1_1MockOutputMediaHandler_html"><div class="ttname"><a href="../../de/db2/classshaka_1_1media_1_1MockOutputMediaHandler.html">shaka::media::MockOutputMediaHandler</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d59/media__handler__test__base_8h_source.html#l00258">media_handler_test_base.h:258</a></div></div>
 <div class="ttc" id="aclassshaka_1_1Status_html"><div class="ttname"><a href="../../d2/d20/classshaka_1_1Status.html">shaka::Status</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d13/status_8h_source.html#l00110">status.h:110</a></div></div>
 <div class="ttc" id="aclassshaka_1_1media_1_1MediaHandler_html_ad5001bf12073101a949b062943769f5b"><div class="ttname"><a href="../../da/dfd/classshaka_1_1media_1_1MediaHandler.html#ad5001bf12073101a949b062943769f5b">shaka::media::MediaHandler::FlushDownstream</a></div><div class="ttdeci">Status FlushDownstream(size_t output_stream_index)</div><div class="ttdoc">Flush the downstream connected at the specified output stream index.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de9/media__handler_8cc_source.html#l00105">media_handler.cc:105</a></div></div>
-<div class="ttc" id="aclassshaka_1_1media_1_1MediaHandler_html"><div class="ttname"><a href="../../da/dfd/classshaka_1_1media_1_1MediaHandler.html">shaka::media::MediaHandler</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d93/media__handler_8h_source.html#l00154">media_handler.h:154</a></div></div>
+<div class="ttc" id="aclassshaka_1_1media_1_1MediaHandler_html"><div class="ttname"><a href="../../da/dfd/classshaka_1_1media_1_1MediaHandler.html">shaka::media::MediaHandler</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d93/media__handler_8h_source.html#l00156">media_handler.h:156</a></div></div>
 <div class="ttc" id="aclassshaka_1_1media_1_1MediaHandler_html_afe98a4fd19eabe0fc78afc91959c34a6"><div class="ttname"><a href="../../da/dfd/classshaka_1_1media_1_1MediaHandler.html#afe98a4fd19eabe0fc78afc91959c34a6">shaka::media::MediaHandler::Dispatch</a></div><div class="ttdeci">Status Dispatch(std::unique_ptr&lt; StreamData &gt; stream_data) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de9/media__handler_8cc_source.html#l00094">media_handler.cc:94</a></div></div>
-<div class="ttc" id="astructshaka_1_1media_1_1StreamData_html"><div class="ttname"><a href="../../d0/d4c/structshaka_1_1media_1_1StreamData.html">shaka::media::StreamData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d93/media__handler_8h_source.html#l00067">media_handler.h:67</a></div></div>
+<div class="ttc" id="astructshaka_1_1media_1_1StreamData_html"><div class="ttname"><a href="../../d0/d4c/structshaka_1_1media_1_1StreamData.html">shaka::media::StreamData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d93/media__handler_8h_source.html#l00069">media_handler.h:69</a></div></div>
 <div class="ttc" id="aclassshaka_1_1media_1_1MediaHandlerGraphTestBase_html_ac08d3b5a07e941a4b582675681bcf948"><div class="ttname"><a href="../../d3/d9a/classshaka_1_1media_1_1MediaHandlerGraphTestBase.html#ac08d3b5a07e941a4b582675681bcf948">shaka::media::MediaHandlerGraphTestBase::next_handler</a></div><div class="ttdeci">std::shared_ptr&lt; CachingMediaHandler &gt; next_handler()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d59/media__handler__test__base_8h_source.html#l00381">media_handler_test_base.h:381</a></div></div>
 <div class="ttc" id="aclassshaka_1_1media_1_1MediaHandler_html_ab644ca7b0a0dbcbc42936f2dfb979ca5"><div class="ttname"><a href="../../da/dfd/classshaka_1_1media_1_1MediaHandler.html#ab644ca7b0a0dbcbc42936f2dfb979ca5">shaka::media::MediaHandler::FlushAllDownstreams</a></div><div class="ttdeci">Status FlushAllDownstreams()</div><div class="ttdoc">Flush all connected downstream handlers.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de9/media__handler_8cc_source.html#l00114">media_handler.cc:114</a></div></div>
 <div class="ttc" id="aclassshaka_1_1media_1_1FakeInputMediaHandler_html"><div class="ttname"><a href="../../d3/d1e/classshaka_1_1media_1_1FakeInputMediaHandler.html">shaka::media::FakeInputMediaHandler</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d59/media__handler__test__base_8h_source.html#l00246">media_handler_test_base.h:246</a></div></div>
 <div class="ttc" id="aclassshaka_1_1media_1_1MediaHandlerGraphTestBase_html_a23d9219606019b25119b2b56adba422e"><div class="ttname"><a href="../../d3/d9a/classshaka_1_1media_1_1MediaHandlerGraphTestBase.html#a23d9219606019b25119b2b56adba422e">shaka::media::MediaHandlerGraphTestBase::GetOutputStreamDataVector</a></div><div class="ttdeci">const std::vector&lt; std::unique_ptr&lt; StreamData &gt; &gt; &amp; GetOutputStreamDataVector() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc7/media__handler__test__base_8cc_source.html#l00364">media_handler_test_base.cc:364</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:03 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:13 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

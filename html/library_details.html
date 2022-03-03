@@ -64,7 +64,7 @@
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5shaka15PackagingParams36transport_stream_timestamp_offset_msE">
-<span id="_CPPv3N5shaka15PackagingParams36transport_stream_timestamp_offset_msE"></span><span id="_CPPv2N5shaka15PackagingParams36transport_stream_timestamp_offset_msE"></span><span id="shaka::PackagingParams::transport_stream_timestamp_offset_ms__uint32_t"></span><span class="target" id="d5/de3/structshaka_1_1PackagingParams_1aa2c8c5254f14048368edb652dd329556"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">transport_stream_timestamp_offset_ms</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N5shaka15PackagingParams36transport_stream_timestamp_offset_msE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N5shaka15PackagingParams36transport_stream_timestamp_offset_msE"></span><span id="_CPPv2N5shaka15PackagingParams36transport_stream_timestamp_offset_msE"></span><span id="shaka::PackagingParams::transport_stream_timestamp_offset_ms__int32_t"></span><span class="target" id="d5/de3/structshaka_1_1PackagingParams_1a9d1ef4ad12f920e6cd7e95094bc64149"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">transport_stream_timestamp_offset_ms</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N5shaka15PackagingParams36transport_stream_timestamp_offset_msE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The offset to be applied to transport stream (e.g. MPEG2-TS, HLS packed audio) timestamps to compensate for possible negative timestamps in the input. </p>
 </dd></dl>
 
@@ -266,6 +266,12 @@
 <dd><p>Indicates whether a ‘sidx’ box should be generated in the media segments. Note that it is required by spec if segment_template contains $Times$ specifier. </p>
 </dd></dl>
 
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5shaka15Mp4OutputParams21low_latency_dash_modeE">
+<span id="_CPPv3N5shaka15Mp4OutputParams21low_latency_dash_modeE"></span><span id="_CPPv2N5shaka15Mp4OutputParams21low_latency_dash_modeE"></span><span id="shaka::Mp4OutputParams::low_latency_dash_mode__b"></span><span class="target" id="d0/d43/structshaka_1_1Mp4OutputParams_1a31e06c6c0a77f5eb3f1d6a9fb91b2dc6"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">low_latency_dash_mode</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N5shaka15Mp4OutputParams21low_latency_dash_modeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enable LL-DASH streaming. Each segment constists of many fragments, and each fragment contains one chunk. A chunk is the smallest unit and is constructed of a single moof and mdat atom. Each chunk is uploaded immediately upon creation, decoupling latency from segment duration. </p>
+</dd></dl>
+
 </div>
 </dd></dl>
 
@@ -297,6 +303,12 @@
 <dt class="sig sig-object cpp" id="_CPPv4N5shaka14ChunkingParams22subsegment_sap_alignedE">
 <span id="_CPPv3N5shaka14ChunkingParams22subsegment_sap_alignedE"></span><span id="_CPPv2N5shaka14ChunkingParams22subsegment_sap_alignedE"></span><span id="shaka::ChunkingParams::subsegment_sap_aligned__b"></span><span class="target" id="d2/d1f/structshaka_1_1ChunkingParams_1afcde8cc6cf9646c78f5bf13181022aa7"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">subsegment_sap_aligned</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N5shaka14ChunkingParams22subsegment_sap_alignedE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Force subsegments to begin with stream access points. Actual subsegment duration may not be exactly what is specified by subsegment_duration. Setting to subsegment_sap_aligned to true but segment_sap_aligned to false is not allowed. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5shaka14ChunkingParams21low_latency_dash_modeE">
+<span id="_CPPv3N5shaka14ChunkingParams21low_latency_dash_modeE"></span><span id="_CPPv2N5shaka14ChunkingParams21low_latency_dash_modeE"></span><span id="shaka::ChunkingParams::low_latency_dash_mode__b"></span><span class="target" id="d2/d1f/structshaka_1_1ChunkingParams_1a46d9f6c8b7710a227354def3bc73e24f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">low_latency_dash_mode</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N5shaka14ChunkingParams21low_latency_dash_modeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enable LL-DASH streaming. Each segment constists of many fragments, and each fragment contains one chunk. A chunk is the smallest unit and is constructed of a single moof and mdat atom. Each chunk is uploaded immediately upon creation, decoupling latency from segment duration. </p>
 </dd></dl>
 
 </div>
@@ -398,6 +410,18 @@
 <dd><p>Uses SegmentList instead of SegmentBase. Use this if the content is huge and the total number of (sub)segment references is greater than what the sidx atom allows (65535). </p>
 </dd></dl>
 
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5shaka9MpdParams21low_latency_dash_modeE">
+<span id="_CPPv3N5shaka9MpdParams21low_latency_dash_modeE"></span><span id="_CPPv2N5shaka9MpdParams21low_latency_dash_modeE"></span><span id="shaka::MpdParams::low_latency_dash_mode__b"></span><span class="target" id="df/ddc/structshaka_1_1MpdParams_1a918d7945a01d0c43010820aeb7267596"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">low_latency_dash_mode</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N5shaka9MpdParams21low_latency_dash_modeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enable LL-DASH streaming. Each segment constists of many fragments, and each fragment contains one chunk. A chunk is the smallest unit and is constructed of a single moof and mdat atom. Each chunk is uploaded immediately upon creation, decoupling latency from segment duration. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5shaka9MpdParams22target_latency_secondsE">
+<span id="_CPPv3N5shaka9MpdParams22target_latency_secondsE"></span><span id="_CPPv2N5shaka9MpdParams22target_latency_secondsE"></span><span id="shaka::MpdParams::target_latency_seconds__double"></span><span class="target" id="df/ddc/structshaka_1_1MpdParams_1af49992a61fa4867a7194e08165b6dd8b"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">target_latency_seconds</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N5shaka9MpdParams22target_latency_secondsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This is the target latency in seconds requested by the user. The actual latency may be different to the target latency and is greatly influnced by the player. This parameter is required by DASH-IF Low Latency standards. </p>
+</dd></dl>
+
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
@@ -485,9 +509,9 @@
 </div>
 </dd></dl>
 
-<dl class="cpp enum">
+<dl class="cpp enum-class">
 <dt class="sig sig-object cpp" id="_CPPv4N5shaka15HlsPlaylistTypeE">
-<span id="_CPPv3N5shaka15HlsPlaylistTypeE"></span><span id="_CPPv2N5shaka15HlsPlaylistTypeE"></span><span class="target" id="d8/daf/namespaceshaka_1ab63a3c00cdbf61cfb6dd7a2497b26f8d"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">shaka</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">HlsPlaylistType</span></span></span><a class="headerlink" href="#_CPPv4N5shaka15HlsPlaylistTypeE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N5shaka15HlsPlaylistTypeE"></span><span id="_CPPv2N5shaka15HlsPlaylistTypeE"></span><span class="target" id="d8/daf/namespaceshaka_1ab63a3c00cdbf61cfb6dd7a2497b26f8d"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">shaka</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">HlsPlaylistType</span></span></span><a class="headerlink" href="#_CPPv4N5shaka15HlsPlaylistTypeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Defines the EXT-X-PLAYLIST-TYPE in the HLS specification. For HlsPlaylistType of kLive, EXT-X-PLAYLIST-TYPE tag is omitted. </p>
 <p><em>Values:</em></p>
 <dl class="cpp enumerator">
@@ -507,9 +531,9 @@
 
 </dd></dl>
 
-<dl class="cpp enum">
+<dl class="cpp enum-class">
 <dt class="sig sig-object cpp" id="_CPPv4N5shaka11KeyProviderE">
-<span id="_CPPv3N5shaka11KeyProviderE"></span><span id="_CPPv2N5shaka11KeyProviderE"></span><span class="target" id="d8/daf/namespaceshaka_1a539b99ce5c34193e294bc544437e9185"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">shaka</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">KeyProvider</span></span></span><a class="headerlink" href="#_CPPv4N5shaka11KeyProviderE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N5shaka11KeyProviderE"></span><span id="_CPPv2N5shaka11KeyProviderE"></span><span class="target" id="d8/daf/namespaceshaka_1a539b99ce5c34193e294bc544437e9185"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">shaka</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">KeyProvider</span></span></span><a class="headerlink" href="#_CPPv4N5shaka11KeyProviderE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Encryption key providers. These provide keys to decrypt the content if the source content is encrypted, or used to encrypt the content. </p>
 <p><em>Values:</em></p>
 <dl class="cpp enumerator">
@@ -573,9 +597,9 @@
 </div>
 </dd></dl>
 
-<dl class="cpp enum">
+<dl class="cpp enum-class">
 <dt class="sig sig-object cpp" id="_CPPv4N5shaka14WidevineSigner14SigningKeyTypeE">
-<span id="_CPPv3N5shaka14WidevineSigner14SigningKeyTypeE"></span><span id="_CPPv2N5shaka14WidevineSigner14SigningKeyTypeE"></span><span class="target" id="df/d22/structshaka_1_1WidevineSigner_1a4f118f7b3a763c9f81b22be37d851313"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">shaka</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N5shaka14WidevineSignerE" title="shaka::WidevineSigner"><span class="n"><span class="pre">WidevineSigner</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">SigningKeyType</span></span></span><a class="headerlink" href="#_CPPv4N5shaka14WidevineSigner14SigningKeyTypeE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N5shaka14WidevineSigner14SigningKeyTypeE"></span><span id="_CPPv2N5shaka14WidevineSigner14SigningKeyTypeE"></span><span class="target" id="df/d22/structshaka_1_1WidevineSigner_1a4f118f7b3a763c9f81b22be37d851313"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">shaka</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N5shaka14WidevineSignerE" title="shaka::WidevineSigner"><span class="n"><span class="pre">WidevineSigner</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">SigningKeyType</span></span></span><a class="headerlink" href="#_CPPv4N5shaka14WidevineSigner14SigningKeyTypeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N5shaka14WidevineSigner14SigningKeyType5kNoneE">
@@ -988,12 +1012,16 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="docker_instructions.html"
-                        title="previous chapter">Using Docker</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="tutorials/encoding.html"
-                        title="next chapter">Media Encoding</a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="docker_instructions.html"
+                          title="previous chapter">Using Docker</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="tutorials/encoding.html"
+                          title="next chapter">Media Encoding</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -1005,7 +1033,7 @@
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -1033,7 +1061,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Google.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
     </div>
   </body>
 </html>

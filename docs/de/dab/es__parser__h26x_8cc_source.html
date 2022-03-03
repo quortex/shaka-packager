@@ -397,7 +397,7 @@ $(function() {
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      <span class="keyword">const</span> int64_t kArbitrarySmallDuration = 0.001 * kMpeg2Timescale;  <span class="comment">// 1ms.</span></div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      pending_sample_-&gt;set_duration(kArbitrarySmallDuration);</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;      uint64_t sample_duration = media_sample-&gt;dts() - pending_sample_-&gt;dts();</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;      int64_t sample_duration = media_sample-&gt;dts() - pending_sample_-&gt;dts();</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      pending_sample_-&gt;set_duration(sample_duration);</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> kArbitraryGapScale = 10;</div>
@@ -425,7 +425,7 @@ $(function() {
 <div class="ttc" id="aclassshaka_1_1media_1_1MediaSample_html_ad8975dbb21747ff32c8604f5489bf5c9"><div class="ttname"><a href="../../d7/d6d/classshaka_1_1media_1_1MediaSample.html#ad8975dbb21747ff32c8604f5489bf5c9">shaka::media::MediaSample::CopyFrom</a></div><div class="ttdeci">static std::shared_ptr&lt; MediaSample &gt; CopyFrom(const uint8_t *data, size_t size, bool is_key_frame)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d0d/media__sample_8cc_source.html#l00042">media_sample.cc:42</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:04 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:14 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

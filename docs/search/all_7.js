@@ -48,5 +48,5 @@ var searchData=
   ['hlsparams_383',['HlsParams',['../d0/da8/structshaka_1_1HlsParams.html',1,'shaka']]],
   ['hlsplaylisttype_384',['HlsPlaylistType',['../d8/daf/namespaceshaka.html#ab63a3c00cdbf61cfb6dd7a2497b26f8d',1,'shaka']]],
   ['httpfile_385',['HttpFile',['../d1/dc7/classshaka_1_1HttpFile.html',1,'shaka']]],
-  ['httpkeyfetcher_386',['HttpKeyFetcher',['../d7/de0/classshaka_1_1media_1_1HttpKeyFetcher.html',1,'shaka::media::HttpKeyFetcher'],['../d7/de0/classshaka_1_1media_1_1HttpKeyFetcher.html#a02561dcbbaf66152dce3ebd466810f15',1,'shaka::media::HttpKeyFetcher::HttpKeyFetcher()'],['../d7/de0/classshaka_1_1media_1_1HttpKeyFetcher.html#a11829a5c6e3507998c4d93c83c3069a4',1,'shaka::media::HttpKeyFetcher::HttpKeyFetcher(uint32_t timeout_in_seconds)']]]
+  ['httpkeyfetcher_386',['HttpKeyFetcher',['../d7/de0/classshaka_1_1media_1_1HttpKeyFetcher.html',1,'shaka::media::HttpKeyFetcher'],['../d7/de0/classshaka_1_1media_1_1HttpKeyFetcher.html#a02561dcbbaf66152dce3ebd466810f15',1,'shaka::media::HttpKeyFetcher::HttpKeyFetcher()'],['../d7/de0/classshaka_1_1media_1_1HttpKeyFetcher.html#a62fc23abac8b2c8120cf4451a1f952b4',1,'shaka::media::HttpKeyFetcher::HttpKeyFetcher(int32_t timeout_in_seconds)']]]
 ];

@@ -97,8 +97,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af56c833453d65297c4dc96c9d2f83e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae33f2cdbd045572095acd7b8d6c1a789"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d2/d20/classshaka_1_1Status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d1f/classshaka_1_1media_1_1KeySource.html#ae33f2cdbd045572095acd7b8d6c1a789">GetKey</a> (const std::vector&lt; uint8_t &gt; &amp;key_id, <a class="el" href="../../dd/dbd/structshaka_1_1media_1_1EncryptionKey.html">EncryptionKey</a> *key)=0</td></tr>
 <tr class="separator:ae33f2cdbd045572095acd7b8d6c1a789"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef67793f02b0cd34b57993fab9f789ae"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d2/d20/classshaka_1_1Status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d1f/classshaka_1_1media_1_1KeySource.html#aef67793f02b0cd34b57993fab9f789ae">GetCryptoPeriodKey</a> (uint32_t crypto_period_index, uint32_t crypto_period_duration_in_seconds, const std::string &amp;stream_label, <a class="el" href="../../dd/dbd/structshaka_1_1media_1_1EncryptionKey.html">EncryptionKey</a> *key)=0</td></tr>
-<tr class="separator:aef67793f02b0cd34b57993fab9f789ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aedb3c53e580f58ad3c2035f77e4b3a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d2/d20/classshaka_1_1Status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d1f/classshaka_1_1media_1_1KeySource.html#a2aedb3c53e580f58ad3c2035f77e4b3a">GetCryptoPeriodKey</a> (uint32_t crypto_period_index, int32_t crypto_period_duration_in_seconds, const std::string &amp;stream_label, <a class="el" href="../../dd/dbd/structshaka_1_1media_1_1EncryptionKey.html">EncryptionKey</a> *key)=0</td></tr>
+<tr class="separator:a2aedb3c53e580f58ad3c2035f77e4b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="../../d1/d1f/classshaka_1_1media_1_1KeySource.html" title="KeySource is responsible for encryption key acquisition.">KeySource</a> is responsible for encryption key acquisition. </p>
@@ -151,8 +151,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aef67793f02b0cd34b57993fab9f789ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef67793f02b0cd34b57993fab9f789ae">&#9670;&nbsp;</a></span>GetCryptoPeriodKey()</h2>
+<a id="a2aedb3c53e580f58ad3c2035f77e4b3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aedb3c53e580f58ad3c2035f77e4b3a">&#9670;&nbsp;</a></span>GetCryptoPeriodKey()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,7 +169,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype">int32_t&#160;</td>
           <td class="paramname"><em>crypto_period_duration_in_seconds</em>, </td>
         </tr>
         <tr>
@@ -207,7 +207,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>OK on success, an error status otherwise. </dd></dl>
 
-<p>Implemented in <a class="el" href="../../da/ddd/classshaka_1_1media_1_1WidevineKeySource.html#aab3666bda5a756ccdd1855cea088b4c6">shaka::media::WidevineKeySource</a>, <a class="el" href="../../d4/da6/classshaka_1_1media_1_1PlayReadyKeySource.html#ad155a38ccb7bd7cfa991580eb0e1bbd3">shaka::media::PlayReadyKeySource</a>, and <a class="el" href="../../db/dd0/classshaka_1_1media_1_1RawKeySource.html#a7518bb799554beefebda75eb76aafbd5">shaka::media::RawKeySource</a>.</p>
+<p>Implemented in <a class="el" href="../../da/ddd/classshaka_1_1media_1_1WidevineKeySource.html#a15976689daa63d7dcb21719515eb9592">shaka::media::WidevineKeySource</a>, <a class="el" href="../../d4/da6/classshaka_1_1media_1_1PlayReadyKeySource.html#af9fc86d472415755870322bf9ae174c6">shaka::media::PlayReadyKeySource</a>, and <a class="el" href="../../db/dd0/classshaka_1_1media_1_1RawKeySource.html#ad00a365c18391bd3d76576ace2c42761">shaka::media::RawKeySource</a>.</p>
 
 </div>
 </div>
@@ -310,7 +310,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:05 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:15 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

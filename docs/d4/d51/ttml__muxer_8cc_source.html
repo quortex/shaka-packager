@@ -107,20 +107,23 @@ $(function() {
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  generator_.Reset();</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  *size = data.size();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="../../d3/d73/classshaka_1_1File.html#a483ce187d628385d342748315d72f8ab">File::WriteStringToFile</a>(filename.c_str(), data))</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> Status(error::FILE_FAILURE, <span class="stringliteral">&quot;Failed to write &quot;</span> + filename);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordflow">return</span> Status::OK;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}  <span class="comment">// namespace ttml</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}  <span class="comment">// namespace media</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}  <span class="comment">// namespace shaka</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="comment">// output to PIPE</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  std::cout &lt;&lt; data &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="../../d3/d73/classshaka_1_1File.html#a483ce187d628385d342748315d72f8ab">File::WriteStringToFile</a>(filename.c_str(), data))</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> Status(error::FILE_FAILURE, <span class="stringliteral">&quot;Failed to write &quot;</span> + filename);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">return</span> Status::OK;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}  <span class="comment">// namespace ttml</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}  <span class="comment">// namespace media</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}  <span class="comment">// namespace shaka</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespaceshaka_html"><div class="ttname"><a href="../../d8/daf/namespaceshaka.html">shaka</a></div><div class="ttdoc">All the methods that are virtual are virtual for mocking.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d15/gflags__hex__bytes_8cc_source.html#l00011">gflags_hex_bytes.cc:11</a></div></div>
-<div class="ttc" id="aclassshaka_1_1File_html_a483ce187d628385d342748315d72f8ab"><div class="ttname"><a href="../../d3/d73/classshaka_1_1File.html#a483ce187d628385d342748315d72f8ab">shaka::File::WriteStringToFile</a></div><div class="ttdeci">static bool WriteStringToFile(const char *file_name, const std::string &amp;contents)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/file_8cc_source.html#l00248">file.cc:248</a></div></div>
+<div class="ttc" id="aclassshaka_1_1File_html_a483ce187d628385d342748315d72f8ab"><div class="ttname"><a href="../../d3/d73/classshaka_1_1File.html#a483ce187d628385d342748315d72f8ab">shaka::File::WriteStringToFile</a></div><div class="ttdeci">static bool WriteStringToFile(const char *file_name, const std::string &amp;contents)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dfc/file_8cc_source.html#l00259">file.cc:259</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:04 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:14 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

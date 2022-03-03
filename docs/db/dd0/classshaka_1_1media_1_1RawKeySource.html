@@ -96,8 +96,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a29b20968ba46f1ad3c206b8173fa6f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5b34dcc690e695f64846a8293335967"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d20/classshaka_1_1Status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd0/classshaka_1_1media_1_1RawKeySource.html#aa5b34dcc690e695f64846a8293335967">GetKey</a> (const std::vector&lt; uint8_t &gt; &amp;key_id, <a class="el" href="../../dd/dbd/structshaka_1_1media_1_1EncryptionKey.html">EncryptionKey</a> *key) override</td></tr>
 <tr class="separator:aa5b34dcc690e695f64846a8293335967"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7518bb799554beefebda75eb76aafbd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d20/classshaka_1_1Status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd0/classshaka_1_1media_1_1RawKeySource.html#a7518bb799554beefebda75eb76aafbd5">GetCryptoPeriodKey</a> (uint32_t crypto_period_index, uint32_t crypto_period_duration_in_seconds, const std::string &amp;stream_label, <a class="el" href="../../dd/dbd/structshaka_1_1media_1_1EncryptionKey.html">EncryptionKey</a> *key) override</td></tr>
-<tr class="separator:a7518bb799554beefebda75eb76aafbd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad00a365c18391bd3d76576ace2c42761"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d20/classshaka_1_1Status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd0/classshaka_1_1media_1_1RawKeySource.html#ad00a365c18391bd3d76576ace2c42761">GetCryptoPeriodKey</a> (uint32_t crypto_period_index, int32_t crypto_period_duration_in_seconds, const std::string &amp;stream_label, <a class="el" href="../../dd/dbd/structshaka_1_1media_1_1EncryptionKey.html">EncryptionKey</a> *key) override</td></tr>
+<tr class="separator:ad00a365c18391bd3d76576ace2c42761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -139,7 +139,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/dd6/raw__key__source_8cc_source.html#l00085">85</a> of file <a class="el" href="../../d4/dd6/raw__key__source_8cc_source.html">raw_key_source.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/dd6/raw__key__source_8cc_source.html#l00086">86</a> of file <a class="el" href="../../d4/dd6/raw__key__source_8cc_source.html">raw_key_source.cc</a>.</p>
 
 </div>
 </div>
@@ -191,8 +191,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7518bb799554beefebda75eb76aafbd5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7518bb799554beefebda75eb76aafbd5">&#9670;&nbsp;</a></span>GetCryptoPeriodKey()</h2>
+<a id="ad00a365c18391bd3d76576ace2c42761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad00a365c18391bd3d76576ace2c42761">&#9670;&nbsp;</a></span>GetCryptoPeriodKey()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,7 +209,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype">int32_t&#160;</td>
           <td class="paramname"><em>crypto_period_duration_in_seconds</em>, </td>
         </tr>
         <tr>
@@ -247,7 +247,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>OK on success, an error status otherwise. </dd></dl>
 
-<p>Implements <a class="el" href="../../d1/d1f/classshaka_1_1media_1_1KeySource.html#aef67793f02b0cd34b57993fab9f789ae">shaka::media::KeySource</a>.</p>
+<p>Implements <a class="el" href="../../d1/d1f/classshaka_1_1media_1_1KeySource.html#a2aedb3c53e580f58ad3c2035f77e4b3a">shaka::media::KeySource</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dd6/raw__key__source_8cc_source.html#l00061">61</a> of file <a class="el" href="../../d4/dd6/raw__key__source_8cc_source.html">raw_key_source.cc</a>.</p>
 
@@ -356,7 +356,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 00:16:05 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 3 2022 08:57:15 for Shaka Packager SDK by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
