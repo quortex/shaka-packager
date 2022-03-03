@@ -76,7 +76,7 @@ bool DvbSubParser::Flush(std::vector<std::shared_ptr<TextSample>>* samples) {
   RCHECK(composer_.GetSamples(
       last_pts_, last_pts_ + previous_timeout_ * kMpeg2Timescale, samples));
   LOG(INFO) << "flush clean object timeout "
-            << previous_timeout_ * kMpeg2Timescale;
+            << last_pts_ + previous_timeout_ * kMpeg2Timescale;
   composer_.ClearObjects();
   return true;
 }
@@ -103,13 +103,9 @@ bool DvbSubParser::ParsePageComposition(
   RCHECK(reader.ReadBits(2, &page_state));
   RCHECK(reader.SkipBits(2));  // reserved
   if (page_state == 0x1 || page_state == 0x2) {
-    // If this is a "acquisition point" or a "mode change", then this is a new
-    // page and we should clear the old data.
-    RCHECK(composer_.GetSamples(
-        last_pts_, last_pts_ + previous_timeout_ * kMpeg2Timescale, samples));
-    composer_.ClearObjects();
-    LOG(INFO) << "clean object timeout " << previous_timeout_ * kMpeg2Timescale;
-    RCHECK(composer_.GetSamples(last_pts_, pts, samples));
+    int64_t end_pts_ = std::min(last_pts_ + previous_timeout_ * kMpeg2Timescale, pts);
+    LOG(INFO) << "clean object : min(pts_end, timeout) : " << end_pts_ << " pts_end : " << pts;
+    RCHECK(composer_.GetSamples(last_pts_, end_pts_, samples));
     composer_.ClearObjects();
     last_pts_ = pts;
     previous_timeout_ = timeout_;
