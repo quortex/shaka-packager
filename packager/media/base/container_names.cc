@@ -804,7 +804,7 @@ static bool CheckMpeg2TransportStream(const uint8_t* buffer, int buffer_size) {
   // (https://en.wikipedia.org/wiki/MPEG_transport_stream). Determine the
   // length with the first packet.
   RCHECK(buffer_size >= 250);  // Want more than 1 packet to check.
-
+  LOG(INFO) << "RBE : check ts packet";
   int offset = 0;
   int packet_length = -1;
   while (packet_length < 0 && offset < 210) {
