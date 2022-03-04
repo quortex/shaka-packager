@@ -67,9 +67,9 @@ bool EsParserH26x::Parse(const uint8_t* buf,
     // or 2 if everythings works as expected.
     const size_t kWarningSize =
         24;  // An arbitrary number (it is 1 second for a fps of 24).
-    LOG_IF(WARNING, timing_desc_list_.size() >= kWarningSize)
-        << "Unusually large number of cached timestamps ("
-        << timing_desc_list_.size() << ").";
+    // LOG_IF(WARNING, timing_desc_list_.size() >= kWarningSize)
+    //     << "Unusually large number of cached timestamps ("
+    //     << timing_desc_list_.size() << ").";
   }
 
   // Add the incoming bytes to the ES queue.
