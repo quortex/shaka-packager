@@ -99,7 +99,7 @@ Status Demuxer::Run() {
   if (!init_event_status_.ok())
     return init_event_status_;
   if (!status.ok())
-    LOG(INFO) << "RBE 0 status EOS error";
+    // LOG(INFO) << "RBE 0 status EOS error";
     return status;
   // Check if all specified outputs exists.
   for (const auto& pair : output_handlers()) {
@@ -120,7 +120,7 @@ Status Demuxer::Run() {
     for (size_t stream_index : stream_indexes_) {
       status = FlushDownstream(stream_index);
       if (!status.ok())
-        LOG(INFO) << "RBE 2 status EOS error";
+        // LOG(INFO) << "RBE 2 status EOS error";
         return status;
     }
     return Status::OK;
@@ -389,7 +389,7 @@ Status Demuxer::Parse() {
   if (bytes_read == 0) {
     if (!parser_->Flush())
       return Status(error::PARSER_FAILURE, "Failed to flush.");
-    LOG(INFO) << "RBE parse : status EOS error";
+    // LOG(INFO) << "RBE parse : status EOS error";
     return Status(error::END_OF_STREAM, "");
   } else if (bytes_read < 0) {
     return Status(error::FILE_FAILURE, "Cannot read file " + file_name_);

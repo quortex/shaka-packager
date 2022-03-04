@@ -115,8 +115,7 @@ int64_t LocalFile::Read(void* buffer, uint64_t length) {
   DCHECK(buffer != NULL);
   DCHECK(internal_file_ != NULL);
   size_t bytes_read = fread(buffer, sizeof(char), length, internal_file_);
-  LOG(INFO) << "RBE read local file Read " << length << " return " << bytes_read << " error "
-          << ferror(internal_file_);
+  // LOG(INFO) << "RBE read local file Read " << length << " return " << bytes_read << " error " << ferror(internal_file_);
   if (bytes_read == 0 && ferror(internal_file_) != 0) {
     return -1;
   }
