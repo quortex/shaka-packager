@@ -550,10 +550,10 @@ int PackagerMain(int argc, char** argv) {
     return kArgumentValidationFailed;
   }
   status = packager.Run();
-  // if (!status.ok()) {
-  //   LOG(ERROR) << "Packaging Error: " << status.ToString();
-  //   return kPackagingFailed;
-  // }
+  if (!status.ok()) {
+    LOG(ERROR) << "Packaging Error: " << status.ToString();
+    return kPackagingFailed;
+  }
   if (!FLAGS_quiet)
     printf("Packaging completed successfully.\n");
   return kSuccess;
