@@ -387,7 +387,6 @@ Status Demuxer::Parse() {
   int64_t bytes_read = media_file_->Read(buffer_.get(), kBufSize);
   if (bytes_read == 0) {
     if (!parser_->Flush())
-      LOG(INFO) << "RBE parse : failed to flush";
       return Status(error::PARSER_FAILURE, "Failed to flush.");
     LOG(INFO) << "RBE parse : status EOS error";
     return Status(error::END_OF_STREAM, "");
