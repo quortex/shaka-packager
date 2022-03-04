@@ -99,6 +99,7 @@ Status Demuxer::Run() {
   if (!init_event_status_.ok())
     return init_event_status_;
   if (!status.ok())
+    LOG(INFO) << "RBE 0 status EOS error";
     return status;
   // Check if all specified outputs exists.
   for (const auto& pair : output_handlers()) {
@@ -116,6 +117,7 @@ Status Demuxer::Run() {
     return Status(error::CANCELLED, "Demuxer run cancelled");
 
   if (status.error_code() == error::END_OF_STREAM) {
+    LOG(INFO) << "RBE 1 status EOS error";
     for (size_t stream_index : stream_indexes_) {
       status = FlushDownstream(stream_index);
       if (!status.ok())
@@ -124,6 +126,7 @@ Status Demuxer::Run() {
     }
     return Status::OK;
   }
+  LOG(INFO) << "RBE 2 status EOS error";
   return status;
 }
 
