@@ -390,7 +390,7 @@ Status Demuxer::Parse() {
     if (!parser_->Flush())
       return Status(error::PARSER_FAILURE, "Failed to flush.");
     // LOG(INFO) << "RBE parse : status EOS error";
-    return Status(error::END_OF_STREAM, "");
+    return Status::OK;
   } else if (bytes_read < 0) {
     return Status(error::FILE_FAILURE, "Cannot read file " + file_name_);
   }
