@@ -117,16 +117,14 @@ Status Demuxer::Run() {
     return Status(error::CANCELLED, "Demuxer run cancelled");
 
   if (status.error_code() == error::END_OF_STREAM) {
-    LOG(INFO) << "RBE 1 status EOS error";
     for (size_t stream_index : stream_indexes_) {
       status = FlushDownstream(stream_index);
       if (!status.ok())
-        LOG(INFO) << "RBE status EOS error";
+        LOG(INFO) << "RBE 2 status EOS error";
         return status;
     }
     return Status::OK;
   }
-  LOG(INFO) << "RBE 2 status EOS error";
   return status;
 }
 
